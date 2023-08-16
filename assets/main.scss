@@ -1,0 +1,465 @@
+  /* IMPORT */
+  /* @use '../sass/utils/variables';
+  @use '../sass/base/normalize';
+  @use '../sass/layouts/footer'; */
+
+
+    /* colors /////////////////////////////////////////*/
+  
+    $prim:#9356DC;
+    $sec:#FF79DA;
+    $ter:#99E2D0;
+
+    
+    $green-font:#008766;
+    $background:#F6F6F6;
+    $light-grey:#EAEAEA;
+    $mid-grey:#7E7E7E;
+    $dark-grey:#353535;
+    $light-blue:#89C8FA;
+    $dark-blue:#003A68;
+    $black:#000000;
+    $white:#FFFFFF;
+  
+    /* fonts //////////////////////////////////////*/
+  
+    /* logo */
+  
+    $logo-font-size:30px;
+    $logo-font-family:'Shrikhand', cursive;
+    $logo-font-style:normal;
+    $logo-font-weight:400;
+    $logo-line-height:normal;
+    $logo-color: $black;
+  
+    /* button */
+  
+    $button-font-size:16px;
+    $button-font-family:'Roboto', sans-serif;
+    $button-font-style:normal;
+    $button-font-weight:500;
+    $button-line-height:normal;
+    $button-color: $black;
+  
+    /* main-title */
+  
+    $main-title-font-size:24px;
+    $main-title-font-family:'Roboto', sans-serif;
+    $main-title-font-style:normal;
+    $main-title-font-weight:700;
+    $main-title-line-height:normal;
+    $button-color: $black;
+  
+    /* motto */
+  
+    $motto-font-size:18px;
+    $motto-font-family:'Roboto', sans-serif;
+    $motto-font-style:normal;
+    $motto-font-weight:300;
+    $motto-line-height:normal;
+    $motto-color: $black;
+  
+    /* label */
+  
+    $label-font-size:14px;
+    $label-font-family:'Roboto', sans-serif;
+    $label-font-style:normal;
+    $label-font-weight:500;
+    $label-line-height:normal;
+    $label-color: $green-font;
+  
+    /* card-title */
+  
+    $card-title-font-size:18px;
+    $card-title-font-family:'Roboto', sans-serif;
+    $card-title-font-style:normal;
+    $card-title-font-weight:700;
+    $card-title-line-height:normal;
+    $card-title-color: $black;
+  
+    /* card-text */
+  
+    $card-text-font-size:17px;
+    $card-text-font-family:'Roboto', sans-serif;
+    $card-text-font-style:normal;
+    $card-text-font-weight:300;
+    $card-text-line-height:normal;
+    $card-text-color:$black;
+  
+    /* footer-title */
+  
+    $footer-title-font-size:18px;
+    $footer-title-font-family:'Shrikhand', cursive;
+    $footer-title-font-style:normal;
+    $footer-title-font-weight:400;
+    $footer-title-line-height:normal;
+    $footer-title-color:$black;
+  
+    /* footer-text */
+  
+    $footer-text-font-size:16px;
+    $footer-text-font-family:'Roboto', sans-serif;
+    $footer-text-font-style:normal;
+    $footer-text-font-weight:500;
+    $footer-text-line-height:normal;
+    $footer-text-color:$black;
+  
+  /* /////////////////////////////////////////////////*/
+
+  * {
+    margin: 0;
+    padding: 0;
+  }
+
+
+  body {
+    box-sizing: border-box;
+  }
+
+  /* header /////////////////////////////////////////*/
+
+  header {
+    text-align: center;
+
+    .nav_logo_title {
+      font-size: $logo-font-size;
+      font-family: $logo-font-family;
+      font-style: $logo-font-style;
+      font-weight: $logo-font-weight;
+      line-height: $logo-line-height;
+      color: $black;
+      padding: 14px 89px;
+      box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
+    }
+  }
+
+  .nav_location {
+    display: flex;
+    gap: 17px;
+    background-color: $light-grey;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+
+    &_logo {
+      width: 12px;
+      height: 16px;
+    }
+
+    &_text {
+      font-size: $button-font-size;
+      font-family: $button-font-family;
+      font-style: $button-font-style;
+      font-weight: $button-font-weight;
+      line-height: $button-line-height;
+      color: $dark-grey;
+    }
+  }
+
+  /* CTA ////////////////////////////////////////*/
+
+  .cta {
+    height: 287px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    background-color: $background;
+    align-items: center;
+
+    .main_title {
+      font-size: $main-title-font-size;
+      font-family: $main-title-font-family;
+      font-style: $main-title-font-style;
+      font-weight: $main-title-font-weight;
+      line-height: $main-title-line-height;
+      color: $black;
+      margin-top: 39px;
+    }
+
+    .motto {
+      font-size: $motto-font-size;
+      font-family: $motto-font-family;
+      font-style: $motto-font-style;
+      font-weight: $motto-font-weight;
+      line-height: $motto-line-height;
+      color: $dark-grey;
+    }
+
+    .main_btn {
+      width: 218px;
+      height: 50px;
+      background: linear-gradient(175deg, rgba(147, 86, 220, 1) 0%, rgba(255, 121, 218, 1) 100%);
+      border-radius: 25px;
+      box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
+      border: none;
+      font-size: $button-font-size;
+      font-family: $button-font-family;
+      font-style: $button-font-style;
+      font-weight: $button-font-weight;
+      line-height: $button-line-height;
+      color: $white;
+      padding: 13px 18.75px;
+      margin-top: 27px;
+      margin-bottom: 57px;
+    }
+  }
+
+  .how_to {
+    background-color: $white;
+    padding: 48px 20px 26px 20px;
+
+    &_title {
+    font-size: $main-title-font-size;
+    font-family: $main-title-font-family;
+    font-style: $main-title-font-style;
+    font-weight: $main-title-font-weight;
+    line-height: $main-title-line-height;
+    color: $black;
+  }
+    &_container {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    align-items: center;
+    padding-bottom: 68px;
+  }
+
+    &_logo {
+    padding-left: 34px;
+  }
+
+    &_text {
+    font-size: $button-font-size;
+    font-family: $button-font-family;
+    font-style: $button-font-style;
+    font-weight: $button-font-weight;
+    line-height: $button-line-height;
+    color: $black;
+    padding-top: 28px;
+    padding-bottom: 28px;
+  }
+
+    &_card {
+    height: 73px;
+    width: 322px;
+    background: $background;
+    border-radius: 20px;
+    box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
+    text-align: center;
+    display: flex;
+    gap: 27px;
+    position: relative;
+
+    &.one::before {
+      content: "1";
+      position: absolute;
+      top: 32px;
+      left: -12px;
+      display: flex;
+      border-radius: 50px;
+      width: 24px;
+      height: 24px;
+      justify-content: center;
+      align-items: center;
+      background-color: $prim;
+      font-size: $label-font-size;
+      font-family: $label-font-family;
+      font-style: $label-font-style;
+      font-weight: $label-font-weight;
+      line-height: $label-line-height;
+      color: $white;
+    }
+
+    &.two::before {
+      content: "2";
+      position: absolute;
+      top: 32px;
+      left: -12px;
+      display: flex;
+      border-radius: 50px;
+      width: 24px;
+      height: 24px;
+      justify-content: center;
+      align-items: center;
+      background-color: $prim;
+      font-size: $label-font-size;
+      font-family: $label-font-family;
+      font-style: $label-font-style;
+      font-weight: $label-font-weight;
+      line-height: $label-line-height;
+      color: $white;
+    }
+
+    &.three::before {
+      content: "3";
+      position: absolute;
+      top: 32px;
+      left: -12px;
+      display: flex;
+      border-radius: 50px;
+      width: 24px;
+      height: 24px;
+      justify-content: center;
+      align-items: center;
+      background-color: $prim;
+      font-size: $label-font-size;
+      font-family: $label-font-family;
+      font-style: $label-font-style;
+      font-weight: $label-font-weight;
+      line-height: $label-line-height;
+      color: $white;
+    }
+
+  } 
+
+  }
+
+/* RESTAURANTS //////////////////////////////////////////////*/
+
+  
+  .restaurants {
+    background: $background;
+    padding: 54px 18px 66px 18px;
+
+    &_main_title {
+      font-size: $main-title-font-size;
+      font-family: $main-title-font-family;
+      font-style: $main-title-font-style;
+      font-weight: $main-title-font-weight;
+      line-height: $main-title-line-height;
+      color: $black;
+      padding-bottom: 24px;
+
+    }
+
+    &_container {
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+      align-items: center;
+
+      &_card {
+        width: 340px;
+        height: 251px;
+        background: $white;
+        box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.10);
+        border-radius: 15px;
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        position: relative;
+
+        .image_card_container {
+      
+          img {
+            object-fit: cover;
+            width: 100%;
+            height: 174px;
+            border-radius: 15px 15px 0 0;
+          }
+
+          &.new::before {
+            content: "Nouveau";
+            width: 80px;
+            height: 22px;
+            background-color: $ter;
+            border-radius: 2px;
+            font-size: $label-font-size;
+            font-family: $label-font-family;
+            font-style: $label-font-style;
+            font-weight: $label-font-weight;
+            line-height: $label-line-height;
+            color: $green-font;
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            text-align: center;
+            padding-top: 7px;
+          }
+        }
+  
+        .bottom_card_container {
+          height: 77px;
+          padding-left: 13px;
+          display: flex;
+          flex-direction: column;
+          gap: 5px;
+          position: relative;
+
+
+          &_title {
+            font-size: $card-title-font-size;
+            font-family: $card-title-font-family;
+            font-style: $card-title-font-style;
+            font-weight: $card-title-font-weight;
+            line-height: $card-title-line-height;
+            color: $black;
+          }
+
+          &_text {
+            font-size: $card-text-font-size;
+            font-family: $card-text-font-family;
+            font-style: $card-text-font-style;
+            font-weight: $card-text-font-weight;
+            line-height: $card-text-line-height;
+            color: $black;
+          }
+
+          .heart_logo {
+            width: 22px;
+            height: 21px;
+            position: absolute;
+            right: 25px;
+            bottom: 33px;
+          }
+
+          .heart_logo:active {
+            background: linear-gradient(175deg, rgba(147, 86, 220, 1) 0%, rgba(255, 121, 218, 1) 100%);
+          }
+
+        }
+ }
+
+  }
+
+  }
+
+  /* FOOTER */
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    background: $dark-grey;
+    padding: 22px 25px;
+    gap: 16px;
+
+    &_title {
+      font-size: $footer-title-font-size;
+      font-family: $footer-title-font-family;
+      font-weight: $footer-title-font-weight;
+      font-style: $footer-title-font-style;
+      line-height: $footer-title-line-height;
+      color: $white;
+    }
+
+    &_container {
+      display: flex;
+      flex-direction: column;
+      gap: 7px;
+    }
+
+    &_link_container {
+      display: flex;
+      gap: 11px;
+    }
+
+    &_text {
+      font-size: $footer-text-font-size;
+      font-family: $footer-text-font-family;
+      font-weight: $footer-text-font-weight;
+      font-style: $footer-text-font-style;
+      line-height: $footer-text-line-height;
+      color: $white;
+    }
+  }
+  
