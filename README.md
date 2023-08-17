@@ -1,9 +1,13 @@
-# hichamecode.github.io
+# P3 OC ohmyfood 
 
-Votre mission est de développer un site “mobile first” qui répertorie les menus de restaurants gastronomiques. En plus des systèmes classiques de réservation, les clients pourront composer le menu de leur repas pour que les plats soient prêts à leur arrivée. Finis, les temps d'attente au restaurant !
+site Web qui répertorie les menus de restaurants gastronomiques. Les clients peuvent composer le menu de leur repas pour que les plats soient prêts à leur arrivée.
 
-L’équipe commerciale a déjà réussi à convaincre 4 restaurateurs d’utiliser la plateforme OhMyFood. Paul décide alors que le site contiendra 4 menus dans un premier temps. 
+# Tech
 
-À deux, vous avez pu établir ce brief créatif pour rassembler toutes les informations clés du projet de développement du site.
+Uniquement HTML CSS / SASS en option 
 
-Le projet va pouvoir commencer.
+# Fonctionnel 
+
+Mobile first : on part de la maquette Figma mobile pour intégrer au fur et à mesure vers le desktop. 
+
+
