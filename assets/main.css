@@ -1,98 +1,52 @@
+@charset "UTF-8";
 /* IMPORT */
-/* @use '../sass/utils/variables';
-@use '../sass/base/normalize';
-@use '../sass/layouts/footer'; */
 /* colors /////////////////////////////////////////*/
 /* fonts //////////////////////////////////////*/
 /* logo */
+/*30px*/
 /* button */
+/*16px*/
 /* main-title */
+/*24px*/
 /* motto */
+/*18px*/
 /* label */
+/*14px*/
 /* card-title */
+/*18px*/
 /* card-text */
+/*17px*/
 /* footer-title */
+/*18px*/
 /* footer-text */
+/*16px*/
 /* /////////////////////////////////////////////////*/
-* {
-  margin: 0;
-  padding: 0;
-}
-
-body {
-  box-sizing: border-box;
-}
-
-/* header /////////////////////////////////////////*/
 header {
   text-align: center;
+  width: 100%;
+  background-color: #FFFFFF;
+}
+header .nav_logo {
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
+  padding: 14px 89px;
 }
 header .nav_logo_title {
-  font-size: 30px;
+  font-size: 1.875rem;
   font-family: "Shrikhand", cursive;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
   color: #000000;
-  padding: 14px 89px;
-  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
 }
 
-.nav_location {
-  display: flex;
-  gap: 17px;
-  background-color: #EAEAEA;
-  align-items: center;
-  justify-content: center;
-  height: 50px;
-}
-.nav_location_logo {
-  width: 12px;
-  height: 16px;
-}
-.nav_location_text {
-  font-size: 16px;
-  font-family: "Roboto", sans-serif;
-  font-style: normal;
-  font-weight: 500;
-  line-height: normal;
-  color: #353535;
-}
-
-/* CTA ////////////////////////////////////////*/
-.cta {
-  height: 287px;
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  background-color: #F6F6F6;
-  align-items: center;
-}
-.cta .main_title {
-  font-size: 24px;
-  font-family: "Roboto", sans-serif;
-  font-style: normal;
-  font-weight: 700;
-  line-height: normal;
-  color: #000000;
-  margin-top: 39px;
-}
-.cta .motto {
-  font-size: 18px;
-  font-family: "Roboto", sans-serif;
-  font-style: normal;
-  font-weight: 300;
-  line-height: normal;
-  color: #353535;
-}
-.cta .main_btn {
+.main_btn {
   width: 218px;
   height: 50px;
   background: linear-gradient(175deg, rgb(147, 86, 220) 0%, rgb(255, 121, 218) 100%);
   border-radius: 25px;
   box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
   border: none;
-  font-size: 16px;
+  font-size: 1rem;
   font-family: "Roboto", sans-serif;
   font-style: normal;
   font-weight: 500;
@@ -102,13 +56,124 @@ header .nav_logo_title {
   margin-top: 27px;
   margin-bottom: 57px;
 }
+.main_btn:hover {
+  background: linear-gradient(0deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.15) 100%), linear-gradient(182deg, #9356DC 0%, #FF79DA 100%);
+  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.35);
+}
+
+/* FOOTER */
+.footer {
+  display: flex;
+  flex-direction: column;
+  background: #353535;
+  padding: 22px 25px;
+  gap: 16px;
+}
+.footer_title {
+  font-size: 1.125rem;
+  font-family: "Shrikhand", cursive;
+  font-weight: 400;
+  font-style: normal;
+  line-height: normal;
+  color: #FFFFFF;
+}
+.footer_container {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+.footer_link_container {
+  display: flex;
+  gap: 11px;
+}
+.footer_text {
+  font-size: 1rem;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  line-height: normal;
+  color: #FFFFFF;
+}
+.footer_text a {
+  color: #FFFFFF;
+}
+
+/* style général /////////////////////////////////////////*/
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.body_container {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  background: #F6F6F6;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* HEADER /////////////////////////////////////////*/
+.nav_location {
+  display: flex;
+  gap: 17px;
+  background-color: #EAEAEA;
+  align-items: center;
+  justify-content: center;
+  height: 3.125rem; /*50px*/
+}
+.nav_location_logo {
+  width: 12px;
+  height: 16px;
+}
+.nav_location_text {
+  font-size: 1rem;
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  color: #353535;
+}
+
+/* CTA ////////////////////////////////////////*/
+.cta {
+  height: 18rem; /*287px*/
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  background-color: #F6F6F6;
+  align-items: center;
+}
+.cta .main_title {
+  font-size: 1.5rem;
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  color: #000000;
+  margin-top: 39px;
+}
+.cta .motto {
+  font-size: 1.125rem;
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+  color: #353535;
+}
 
 .how_to {
   background-color: #FFFFFF;
-  padding: 48px 20px 26px 20px;
+  padding: 48px 20px 68px 20px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
 }
 .how_to_title {
-  font-size: 24px;
+  font-size: 1.5rem;
   font-family: "Roboto", sans-serif;
   font-style: normal;
   font-weight: 700;
@@ -120,13 +185,14 @@ header .nav_logo_title {
   flex-direction: column;
   gap: 25px;
   align-items: center;
-  padding-bottom: 68px;
 }
 .how_to_logo {
+  width: 13px;
+  height: 20px;
   padding-left: 34px;
 }
 .how_to_text {
-  font-size: 16px;
+  font-size: 1rem;
   font-family: "Roboto", sans-serif;
   font-style: normal;
   font-weight: 500;
@@ -136,12 +202,12 @@ header .nav_logo_title {
   padding-bottom: 28px;
 }
 .how_to_card {
-  height: 73px;
-  width: 322px;
+  width: 20.15rem; /*322.5px*/
+  height: 4.56rem; /*73px*/
   background: #F6F6F6;
   border-radius: 20px;
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
-  text-align: center;
+  align-items: center;
   display: flex;
   gap: 27px;
   position: relative;
@@ -158,7 +224,7 @@ header .nav_logo_title {
   justify-content: center;
   align-items: center;
   background-color: #9356DC;
-  font-size: 14px;
+  font-size: 0.875rem;
   font-family: "Roboto", sans-serif;
   font-style: normal;
   font-weight: 500;
@@ -177,7 +243,7 @@ header .nav_logo_title {
   justify-content: center;
   align-items: center;
   background-color: #9356DC;
-  font-size: 14px;
+  font-size: 0.875rem;
   font-family: "Roboto", sans-serif;
   font-style: normal;
   font-weight: 500;
@@ -196,7 +262,7 @@ header .nav_logo_title {
   justify-content: center;
   align-items: center;
   background-color: #9356DC;
-  font-size: 14px;
+  font-size: 0.875rem;
   font-family: "Roboto", sans-serif;
   font-style: normal;
   font-weight: 500;
@@ -210,7 +276,7 @@ header .nav_logo_title {
   padding: 54px 18px 66px 18px;
 }
 .restaurants_main_title {
-  font-size: 24px;
+  font-size: 1.5rem;
   font-family: "Roboto", sans-serif;
   font-style: normal;
   font-weight: 700;
@@ -220,12 +286,15 @@ header .nav_logo_title {
 }
 .restaurants_container {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  flex-wrap: wrap;
   gap: 18px;
-  align-items: center;
+  justify-content: center;
 }
 .restaurants_container_card {
-  width: 340px;
+  width: 90.5%;
+  max-width: 450px;
+  min-width: 340px;
   height: 251px;
   background: #FFFFFF;
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1);
@@ -248,7 +317,7 @@ header .nav_logo_title {
   height: 22px;
   background-color: #99E2D0;
   border-radius: 2px;
-  font-size: 14px;
+  font-size: 0.875rem;
   font-family: "Roboto", sans-serif;
   font-style: normal;
   font-weight: 500;
@@ -267,9 +336,11 @@ header .nav_logo_title {
   flex-direction: column;
   gap: 5px;
   position: relative;
+  /* style pour heart_logo */
+  /* style pour heart_filled */
 }
 .restaurants_container_card .bottom_card_container_title {
-  font-size: 18px;
+  font-size: 1.125rem;
   font-family: "Roboto", sans-serif;
   font-style: normal;
   font-weight: 700;
@@ -277,7 +348,7 @@ header .nav_logo_title {
   color: #000000;
 }
 .restaurants_container_card .bottom_card_container_text {
-  font-size: 17px;
+  font-size: 1.063rem;
   font-family: "Roboto", sans-serif;
   font-style: normal;
   font-weight: 300;
@@ -290,41 +361,74 @@ header .nav_logo_title {
   position: absolute;
   right: 25px;
   bottom: 33px;
+  opacity: 1;
+  border: none;
 }
-.restaurants_container_card .bottom_card_container .heart_logo:active {
-  background: linear-gradient(175deg, rgb(147, 86, 220) 0%, rgb(255, 121, 218) 100%);
+.restaurants_container_card .bottom_card_container .heart_filled {
+  display: none;
+  width: 22px;
+  height: 21px;
+  position: absolute;
+  border: none;
+  right: 25px;
+  bottom: 39.3px;
+  opacity: 0;
+  transform: scale(0);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+.restaurants_container_card .bottom_card_container .heart_switch:checked + label + .heart_filled {
+  display: block;
+  opacity: 1;
+  transform: scale(1);
+}
+.restaurants_container_card .bottom_card_container .heart_switch {
+  display: none;
+}
+.restaurants_container_card .bottom_card_container label {
+  position: relative;
 }
 
-/* FOOTER */
-.footer {
-  display: flex;
-  flex-direction: column;
-  background: #353535;
-  padding: 22px 25px;
-  gap: 16px;
-}
-.footer_title {
-  font-size: 18px;
-  font-family: "Shrikhand", cursive;
-  font-weight: 400;
-  font-style: normal;
-  line-height: normal;
-  color: #FFFFFF;
-}
-.footer_container {
-  display: flex;
-  flex-direction: column;
-  gap: 7px;
-}
-.footer_link_container {
-  display: flex;
-  gap: 11px;
-}
-.footer_text {
-  font-size: 16px;
-  font-family: "Roboto", sans-serif;
-  font-weight: 500;
-  font-style: normal;
-  line-height: normal;
-  color: #FFFFFF;
+/* MEDIA QUERIES DESKTOP */
+@media (min-width: 1440px) {
+  .body_container {
+    gap: 30px;
+  }
+  .cta {
+    gap: 18px;
+  }
+  .how_to {
+    padding-left: 180px;
+    padding-right: 180px;
+  }
+  .how_to_container {
+    flex-direction: row;
+    justify-content: center;
+    gap: 36px;
+  }
+  .restaurants {
+    padding-left: 180px;
+    padding-right: 180px;
+  }
+  .restaurants_container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    -moz-column-gap: 100px;
+         column-gap: 100px;
+    row-gap: 50px;
+  }
+  .restaurants_container_card {
+    width: 490px;
+  }
+  .footer {
+    flex-direction: row-reverse;
+  }
+  .footer_container {
+    flex-direction: row;
+  }
+  .footer .footer_link_container {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: baseline;
+  }
 }/*# sourceMappingURL=main.css.map */

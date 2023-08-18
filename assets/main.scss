@@ -1,137 +1,30 @@
   /* IMPORT */
-  /* @use '../sass/utils/variables';
-  @use '../sass/base/normalize';
-  @use '../sass/layouts/footer'; */
 
+  @import"../sass/utils/variables";
+  @import"../sass/layouts/header";
+  @import"../sass/components/components";
+  @import"../sass/layouts/footer";
+ 
 
-    /* colors /////////////////////////////////////////*/
-  
-    $prim:#9356DC;
-    $sec:#FF79DA;
-    $ter:#99E2D0;
-
-    
-    $green-font:#008766;
-    $background:#F6F6F6;
-    $light-grey:#EAEAEA;
-    $mid-grey:#7E7E7E;
-    $dark-grey:#353535;
-    $light-blue:#89C8FA;
-    $dark-blue:#003A68;
-    $black:#000000;
-    $white:#FFFFFF;
-  
-    /* fonts //////////////////////////////////////*/
-  
-    /* logo */
-  
-    $logo-font-size:30px;
-    $logo-font-family:'Shrikhand', cursive;
-    $logo-font-style:normal;
-    $logo-font-weight:400;
-    $logo-line-height:normal;
-    $logo-color: $black;
-  
-    /* button */
-  
-    $button-font-size:16px;
-    $button-font-family:'Roboto', sans-serif;
-    $button-font-style:normal;
-    $button-font-weight:500;
-    $button-line-height:normal;
-    $button-color: $black;
-  
-    /* main-title */
-  
-    $main-title-font-size:24px;
-    $main-title-font-family:'Roboto', sans-serif;
-    $main-title-font-style:normal;
-    $main-title-font-weight:700;
-    $main-title-line-height:normal;
-    $button-color: $black;
-  
-    /* motto */
-  
-    $motto-font-size:18px;
-    $motto-font-family:'Roboto', sans-serif;
-    $motto-font-style:normal;
-    $motto-font-weight:300;
-    $motto-line-height:normal;
-    $motto-color: $black;
-  
-    /* label */
-  
-    $label-font-size:14px;
-    $label-font-family:'Roboto', sans-serif;
-    $label-font-style:normal;
-    $label-font-weight:500;
-    $label-line-height:normal;
-    $label-color: $green-font;
-  
-    /* card-title */
-  
-    $card-title-font-size:18px;
-    $card-title-font-family:'Roboto', sans-serif;
-    $card-title-font-style:normal;
-    $card-title-font-weight:700;
-    $card-title-line-height:normal;
-    $card-title-color: $black;
-  
-    /* card-text */
-  
-    $card-text-font-size:17px;
-    $card-text-font-family:'Roboto', sans-serif;
-    $card-text-font-style:normal;
-    $card-text-font-weight:300;
-    $card-text-line-height:normal;
-    $card-text-color:$black;
-  
-    /* footer-title */
-  
-    $footer-title-font-size:18px;
-    $footer-title-font-family:'Shrikhand', cursive;
-    $footer-title-font-style:normal;
-    $footer-title-font-weight:400;
-    $footer-title-line-height:normal;
-    $footer-title-color:$black;
-  
-    /* footer-text */
-  
-    $footer-text-font-size:16px;
-    $footer-text-font-family:'Roboto', sans-serif;
-    $footer-text-font-style:normal;
-    $footer-text-font-weight:500;
-    $footer-text-line-height:normal;
-    $footer-text-color:$black;
-  
-  /* /////////////////////////////////////////////////*/
-
+  /* style général /////////////////////////////////////////*/
   * {
     margin: 0;
     padding: 0;
   }
 
-
-  body {
+  .body_container {
     box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    background: $background;
   }
 
-  /* header /////////////////////////////////////////*/
-
-  header {
-    text-align: center;
-
-    .nav_logo_title {
-      font-size: $logo-font-size;
-      font-family: $logo-font-family;
-      font-style: $logo-font-style;
-      font-weight: $logo-font-weight;
-      line-height: $logo-line-height;
-      color: $black;
-      padding: 14px 89px;
-      box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
-    }
+  a {
+    text-decoration: none;
   }
+
+
+  /* HEADER /////////////////////////////////////////*/
 
   .nav_location {
     display: flex;
@@ -139,7 +32,7 @@
     background-color: $light-grey;
     align-items: center;
     justify-content: center;
-    height: 50px;
+    height: 3.125rem; /*50px*/
 
     &_logo {
       width: 12px;
@@ -159,7 +52,7 @@
   /* CTA ////////////////////////////////////////*/
 
   .cta {
-    height: 287px;
+    height: 18rem; /*287px*/
     display: flex;
     flex-direction: column;
     text-align: center;
@@ -185,28 +78,15 @@
       color: $dark-grey;
     }
 
-    .main_btn {
-      width: 218px;
-      height: 50px;
-      background: linear-gradient(175deg, rgba(147, 86, 220, 1) 0%, rgba(255, 121, 218, 1) 100%);
-      border-radius: 25px;
-      box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
-      border: none;
-      font-size: $button-font-size;
-      font-family: $button-font-family;
-      font-style: $button-font-style;
-      font-weight: $button-font-weight;
-      line-height: $button-line-height;
-      color: $white;
-      padding: 13px 18.75px;
-      margin-top: 27px;
-      margin-bottom: 57px;
-    }
   }
 
   .how_to {
     background-color: $white;
-    padding: 48px 20px 26px 20px;
+    padding: 48px 20px 68px 20px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
 
     &_title {
     font-size: $main-title-font-size;
@@ -221,11 +101,12 @@
     flex-direction: column;
     gap: 25px;
     align-items: center;
-    padding-bottom: 68px;
   }
 
     &_logo {
-    padding-left: 34px;
+      width: 13px;
+      height: 20px;
+      padding-left: 34px;
   }
 
     &_text {
@@ -240,12 +121,13 @@
   }
 
     &_card {
-    height: 73px;
-    width: 322px;
+      width: 20.15rem; /*322.5px*/
+      height: 4.56rem; /*73px*/
+  
     background: $background;
     border-radius: 20px;
     box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
-    text-align: center;
+    align-items: center;
     display: flex;
     gap: 27px;
     position: relative;
@@ -334,12 +216,15 @@
 
     &_container {
       display: flex;
-      flex-direction: column;
+      flex-direction: row;
+      flex-wrap: wrap;
       gap: 18px;
-      align-items: center;
+      justify-content: center;
 
       &_card {
-        width: 340px;
+        width: 90.5%;
+        max-width: 450px;
+        min-width: 340px;
         height: 251px;
         background: $white;
         box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.10);
@@ -404,18 +289,49 @@
             line-height: $card-text-line-height;
             color: $black;
           }
-
+          /* style pour heart_logo */
           .heart_logo {
             width: 22px;
             height: 21px;
             position: absolute;
             right: 25px;
             bottom: 33px;
+            opacity: 1;
+            border: none;
+
           }
 
-          .heart_logo:active {
-            background: linear-gradient(175deg, rgba(147, 86, 220, 1) 0%, rgba(255, 121, 218, 1) 100%);
+          
+          /* style pour heart_filled */
+          .heart_filled {
+            display: none;
+            width: 22px;
+            height: 21px;
+            position: absolute;
+            border: none;
+            right: 25px;
+            bottom: 39.3px;
+            opacity: 0;
+            transform: scale(0);
+            transition: opacity 0.3s ease, transform 0.3s ease;
           }
+
+          .heart_switch:checked + label + .heart_filled {
+            display: block;
+            opacity: 1;
+            transform: scale(1);
+          }
+
+          .heart_switch {
+            display: none;
+
+          }
+
+          label {
+            position: relative;
+          }
+
+     
 
         }
  }
@@ -423,43 +339,65 @@
   }
 
   }
+/* MEDIA QUERIES DESKTOP */
 
-  /* FOOTER */
+  @media (min-width: 1440px) {
 
-.footer {
-    display: flex;
-    flex-direction: column;
-    background: $dark-grey;
-    padding: 22px 25px;
-    gap: 16px;
-
-    &_title {
-      font-size: $footer-title-font-size;
-      font-family: $footer-title-font-family;
-      font-weight: $footer-title-font-weight;
-      font-style: $footer-title-font-style;
-      line-height: $footer-title-line-height;
-      color: $white;
+    .body_container {
+      gap: 30px;
     }
 
-    &_container {
-      display: flex;
-      flex-direction: column;
-      gap: 7px;
+    .cta {
+      gap: 18px;
+   
     }
 
-    &_link_container {
-      display: flex;
-      gap: 11px;
+    .how_to {
+      padding-left: 180px;
+      padding-right: 180px;
+    }
+    .how_to_container {
+      flex-direction: row;
+      justify-content: center;
+      gap: 36px;
+
     }
 
-    &_text {
-      font-size: $footer-text-font-size;
-      font-family: $footer-text-font-family;
-      font-weight: $footer-text-font-weight;
-      font-style: $footer-text-font-style;
-      line-height: $footer-text-line-height;
-      color: $white;
+
+    .restaurants {
+      padding-left: 180px;
+      padding-right: 180px;
     }
+    .restaurants_container {
+      
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        column-gap: 100px;
+        row-gap: 50px;
+        }
+
+    .restaurants_container_card {
+      width: 490px;
+    }
+
+
+    .footer {
+      flex-direction: row-reverse;
+
+      &_container {
+        flex-direction: row;
+      }
+
+      .footer_link_container {
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: baseline;
+        
+        
+      }
+
+    }
+    
+
   }
-  
