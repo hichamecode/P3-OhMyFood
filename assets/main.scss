@@ -1,10 +1,11 @@
   /* IMPORT */
 
   @import"../sass/utils/variables";
+  @import"../sass/base/animations";
   @import"../sass/layouts/header";
   @import"../sass/components/components";
   @import"../sass/layouts/footer";
- 
+
 
   /* style général /////////////////////////////////////////*/
   * {
@@ -32,7 +33,8 @@
     background-color: $light-grey;
     align-items: center;
     justify-content: center;
-    height: 3.125rem; /*50px*/
+    height: 3.125rem;
+    /*50px*/
 
     &_logo {
       width: 12px;
@@ -52,7 +54,8 @@
   /* CTA ////////////////////////////////////////*/
 
   .cta {
-    height: 18rem; /*287px*/
+    height: 18rem;
+    /*287px*/
     display: flex;
     flex-direction: column;
     text-align: center;
@@ -80,6 +83,8 @@
 
   }
 
+  /* HOW TO //////////////////////////////////////////////*/
+
   .how_to {
     background-color: $white;
     padding: 48px 20px 68px 20px;
@@ -89,116 +94,79 @@
     gap: 25px;
 
     &_title {
-    font-size: $main-title-font-size;
-    font-family: $main-title-font-family;
-    font-style: $main-title-font-style;
-    font-weight: $main-title-font-weight;
-    line-height: $main-title-line-height;
-    color: $black;
-  }
+      font-size: $main-title-font-size;
+      font-family: $main-title-font-family;
+      font-style: $main-title-font-style;
+      font-weight: $main-title-font-weight;
+      line-height: $main-title-line-height;
+      color: $black;
+    }
+
     &_container {
-    display: flex;
-    flex-direction: column;
-    gap: 25px;
-    align-items: center;
-  }
+      display: flex;
+      flex-direction: column;
+      gap: 25px;
+      align-items: center;
+    }
 
     &_logo {
       width: 13px;
       height: 20px;
       padding-left: 34px;
-  }
+    }
 
     &_text {
-    font-size: $button-font-size;
-    font-family: $button-font-family;
-    font-style: $button-font-style;
-    font-weight: $button-font-weight;
-    line-height: $button-line-height;
-    color: $black;
-    padding-top: 28px;
-    padding-bottom: 28px;
-  }
+      font-size: $button-font-size;
+      font-family: $button-font-family;
+      font-style: $button-font-style;
+      font-weight: $button-font-weight;
+      line-height: $button-line-height;
+      color: $black;
+      padding-top: 28px;
+      padding-bottom: 28px;
+    }
 
     &_card {
-      width: 20.15rem; /*322.5px*/
-      height: 4.56rem; /*73px*/
-  
-    background: $background;
-    border-radius: 20px;
-    box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
-    align-items: center;
-    display: flex;
-    gap: 27px;
-    position: relative;
+      width: 20.15rem;
+      /*322.5px*/
+      min-width: 290px;
+      height: 4.56rem;
+      /*73px*/
 
-    &.one::before {
-      content: "1";
-      position: absolute;
-      top: 32px;
-      left: -12px;
-      display: flex;
-      border-radius: 50px;
-      width: 24px;
-      height: 24px;
-      justify-content: center;
+      background: $background;
+      border-radius: 20px;
+      box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
       align-items: center;
-      background-color: $prim;
-      font-size: $label-font-size;
-      font-family: $label-font-family;
-      font-style: $label-font-style;
-      font-weight: $label-font-weight;
-      line-height: $label-line-height;
-      color: $white;
-    }
-
-    &.two::before {
-      content: "2";
-      position: absolute;
-      top: 32px;
-      left: -12px;
       display: flex;
-      border-radius: 50px;
-      width: 24px;
-      height: 24px;
-      justify-content: center;
-      align-items: center;
-      background-color: $prim;
-      font-size: $label-font-size;
-      font-family: $label-font-family;
-      font-style: $label-font-style;
-      font-weight: $label-font-weight;
-      line-height: $label-line-height;
-      color: $white;
-    }
+      gap: 27px;
+      position: relative;
 
-    &.three::before {
-      content: "3";
-      position: absolute;
-      top: 32px;
-      left: -12px;
-      display: flex;
-      border-radius: 50px;
-      width: 24px;
-      height: 24px;
-      justify-content: center;
-      align-items: center;
-      background-color: $prim;
-      font-size: $label-font-size;
-      font-family: $label-font-family;
-      font-style: $label-font-style;
-      font-weight: $label-font-weight;
-      line-height: $label-line-height;
-      color: $white;
-    }
+      .label_circle {
+        position: absolute;
+        top: 32px;
+        left: -12px;
+        display: flex;
+        border-radius: 50px;
+        width: 24px;
+        height: 24px;
+        justify-content: center;
+        align-items: center;
+        background-color: $prim;
+        font-size: $label-font-size;
+        font-family: $label-font-family;
+        font-style: $label-font-style;
+        font-weight: $label-font-weight;
+        line-height: $label-line-height;
+        color: $white;
+      }
 
-  } 
+    }
 
   }
 
-/* RESTAURANTS //////////////////////////////////////////////*/
+  /* RESTAURANTS //////////////////////////////////////////////*/
 
-  
+
   .restaurants {
     background: $background;
     padding: 54px 18px 66px 18px;
@@ -235,7 +203,7 @@
         position: relative;
 
         .image_card_container {
-      
+
           img {
             object-fit: cover;
             width: 100%;
@@ -243,8 +211,7 @@
             border-radius: 15px 15px 0 0;
           }
 
-          &.new::before {
-            content: "Nouveau";
+          .label_flag {
             width: 80px;
             height: 22px;
             background-color: $ter;
@@ -262,7 +229,7 @@
             padding-top: 7px;
           }
         }
-  
+
         .bottom_card_container {
           height: 77px;
           padding-left: 13px;
@@ -289,59 +256,17 @@
             line-height: $card-text-line-height;
             color: $black;
           }
-          /* style pour heart_logo */
-          .heart_logo {
-            width: 22px;
-            height: 21px;
-            position: absolute;
-            right: 25px;
-            bottom: 33px;
-            opacity: 1;
-            border: none;
-
-          }
-
-          
-          /* style pour heart_filled */
-          .heart_filled {
-            display: none;
-            width: 22px;
-            height: 21px;
-            position: absolute;
-            border: none;
-            right: 25px;
-            bottom: 39.3px;
-            opacity: 0;
-            transform: scale(0);
-            transition: opacity 0.3s ease, transform 0.3s ease;
-          }
-
-          .heart_switch:checked + label + .heart_filled {
-            display: block;
-            opacity: 1;
-            transform: scale(1);
-          }
-
-          .heart_switch {
-            display: none;
-
-          }
-
-          label {
-            position: relative;
-          }
-
-     
 
         }
- }
+      }
+
+    }
 
   }
 
-  }
-/* MEDIA QUERIES DESKTOP */
+  /* MEDIA QUERIES DESKTOP */
 
-  @media (min-width: 1440px) {
+  @media (min-width: 1024px) {
 
     .body_container {
       gap: 30px;
@@ -349,13 +274,14 @@
 
     .cta {
       gap: 18px;
-   
+
     }
 
     .how_to {
       padding-left: 180px;
       padding-right: 180px;
     }
+
     .how_to_container {
       flex-direction: row;
       justify-content: center;
@@ -368,14 +294,12 @@
       padding-left: 180px;
       padding-right: 180px;
     }
+
     .restaurants_container {
-      
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat(2, 1fr);
-        column-gap: 100px;
-        row-gap: 50px;
-        }
+      column-gap: 100px;
+      row-gap: 50px;
+    }
+
 
     .restaurants_container_card {
       width: 490px;
@@ -393,11 +317,28 @@
         flex-direction: row;
         flex-wrap: wrap;
         align-items: baseline;
-        
-        
+
+
       }
 
     }
-    
+
+  }
+
+  @media (min-width: 768px) {
+
+
+    .cta {
+      gap: 18px;
+
+    }
+
+    .restaurants_container_card {
+      width: 40.5%;
+      max-width: 450px;
+      min-width: 340px;
+    }
+
+    .footer {}
 
   }

@@ -1,3 +1,5 @@
+/* STYLE POUR LE BOUTON PRINCIPAL */
+
 .main_btn {
     width: 218px;
     height: 50px;
@@ -14,10 +16,58 @@
     padding: 13px 18.75px;
     margin-top: 27px;
     margin-bottom: 57px;
+    transition: box-shadow 200ms ease, opacity 200ms ease; // liser la sortie de l'animation 
+
+    
 
     &:hover {
-      background: linear-gradient(0deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.15) 100%), linear-gradient(182deg, #9356DC 0%, #FF79DA 100%);
+      animation: btnChange 200ms;
+      animation-iteration-count: 1; // nombre d'itérations de l'animation
+      animation-fill-mode: forwards; // reste sur le dernier étape de l'animation
+      cursor: pointer;
       box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.35);
     }
   }
+/* ANIMATION POUR LE BOUTON PRINCIPAL */
+
+  @keyframes btnChange {
+    0% {opacity: 1}
+    30% {opacity: 0.95}
+    60% {opacity: 0.90}
+    100% {opacity: 0.85}
+  }
+
+/* STYLE POUR LE COEUR */
+
+   .heart_logo,
+   .heart_filled {
+     width: 22px;
+     height: 21px;
+     position: absolute;
+     right: 25px;
+     bottom: 33px;
+     background-size: cover;
+     transition: opacity 200ms ease-in;
+   }
+
+   .heart_filled {
+     opacity: 0;
+   }
+
+   /* Factorisation des sélecteurs pour les coeurs */
+
+   /* Commencez à partir du sélecteur initial */
+   [id^="heart_toggle_"]:checked~.heart_filled {
+     opacity: 1;// permet de cibler tous les id qui com par ....
+   }
+
+   /* Utilisez la même logique pour cacher le coeur vide */
+   [id^="heart_toggle_"]:checked~.heart_logo {
+     opacity: 0;
+   }
+
+   .hide_checkbox {
+     position: absolute;
+     left: - 9999px;
+   }
 
