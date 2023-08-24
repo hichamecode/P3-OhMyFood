@@ -1,0 +1,872 @@
+@charset "UTF-8";
+/* IMPORT */
+/* colors /////////////////////////////////////////*/
+/* fonts //////////////////////////////////////*/
+/* logo */
+/*30px*/
+/* button */
+/*16px*/
+/* main-title */
+/*24px*/
+/* motto */
+/*18px*/
+/* label */
+/*14px*/
+/* card-title */
+/*18px*/
+/* card-text */
+/*17px*/
+/* footer-title */
+/*18px*/
+/* footer-text */
+/*16px*/
+/* /////////////////////////////////////////////////*/
+.plate_container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: fixed;
+  background: linear-gradient(175deg, #9356DC 0%, #FF79DA 100%);
+  animation: exitClock 3000ms ease-in forwards;
+  animation-delay: 1000ms;
+  z-index: 2;
+  height: 100vh;
+  width: 100%;
+}
+
+.plate {
+  width: 600px;
+  height: 600px;
+  background: lightgray;
+  border-radius: 300px;
+  border: 1px goldenrod solid;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: bouncingClock 1000ms cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+}
+
+.plate img {
+  height: 60px;
+  width: 400px;
+  position: absolute;
+  top: 47%;
+  right: 17%;
+  border-radius: 20px;
+  animation: bouncingClock 1000ms cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+}
+
+.fork_one {
+  height: 300px;
+  width: auto;
+  background-color: transparent;
+  position: absolute;
+  animation: rotationMinute 20s infinite ease-in-out;
+  transform-origin: bottom left;
+  bottom: 50%;
+  left: 50%;
+}
+
+.fork_one img {
+  height: 200px;
+  width: auto;
+  animation: bouncingClock 1000ms cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+}
+
+.fork_two img {
+  height: 200px;
+  width: auto;
+  animation: bouncingClock 1000ms cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+}
+
+.inner_circle {
+  width: 55%;
+  height: 55%;
+  border: none;
+  border-radius: 50%;
+  box-shadow: inset 0 5px 3px rgba(0, 0, 0, 0.3), inset 0 -2px 1px rgb(255, 255, 255);
+  margin: 15% auto;
+  z-index: 1;
+}
+
+.fork_two {
+  height: 300px;
+  width: auto;
+  background-color: transparent;
+  position: absolute;
+  transform-origin: bottom left;
+  animation: rotationSecond 3s infinite ease-in-out;
+  bottom: 50%;
+  left: 50%;
+}
+
+/* ANIMATION DISPARITION LOADER */
+@keyframes exitClock {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+/* ANIMATION DESCENTE ASSIETTE ET DES COUVERTS */
+@keyframes bouncingClock {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+/* ANIMATION POUR LA FOURCHETTE DES MINUTES */
+@keyframes rotationMinute {
+  0% {
+    rotate: 0deg;
+  }
+  8.33% {
+    rotate: 30deg;
+  }
+  16.66% {
+    rotate: 60deg;
+  }
+  25% {
+    rotate: 90deg;
+  }
+  33.32% {
+    rotate: 120deg;
+  }
+  41.65% {
+    rotate: 150deg;
+  }
+  50% {
+    rotate: 180deg;
+  }
+  58.31% {
+    rotate: 210deg;
+  }
+  66.64% {
+    rotate: 240deg;
+  }
+  75% {
+    rotate: 270deg;
+  }
+  83.3% {
+    rotate: 300deg;
+  }
+  91.63% {
+    rotate: 330deg;
+  }
+  100% {
+    rotate: 360deg;
+  }
+}
+/* ANIMATION POUR LA FOURCHETTE DES SECONDES */
+@keyframes rotationSecond {
+  0% {
+    rotate: 0deg;
+  }
+  1% {
+    rotate: 3.6deg;
+  }
+  2% {
+    rotate: 7.2deg;
+  }
+  3% {
+    rotate: 10.8deg;
+  }
+  4% {
+    rotate: 14.4deg;
+  }
+  5% {
+    rotate: 18deg;
+  }
+  6% {
+    rotate: 21.6deg;
+  }
+  7% {
+    rotate: 25.2deg;
+  }
+  8% {
+    rotate: 28.8deg;
+  }
+  9% {
+    rotate: 32.4deg;
+  }
+  10% {
+    rotate: 36deg;
+  }
+  11% {
+    rotate: 39.6deg;
+  }
+  12% {
+    rotate: 43.2deg;
+  }
+  13% {
+    rotate: 46.8deg;
+  }
+  14% {
+    rotate: 50.4deg;
+  }
+  15% {
+    rotate: 54deg;
+  }
+  16% {
+    rotate: 57.6deg;
+  }
+  17% {
+    rotate: 61.2deg;
+  }
+  18% {
+    rotate: 64.8deg;
+  }
+  19% {
+    rotate: 68.4deg;
+  }
+  20% {
+    rotate: 72deg;
+  }
+  21% {
+    rotate: 75.6deg;
+  }
+  22% {
+    rotate: 79.2deg;
+  }
+  23% {
+    rotate: 82.8deg;
+  }
+  24% {
+    rotate: 86.4deg;
+  }
+  25% {
+    rotate: 90deg;
+  }
+  26% {
+    rotate: 93.6deg;
+  }
+  27% {
+    rotate: 97.2deg;
+  }
+  28% {
+    rotate: 100.8deg;
+  }
+  29% {
+    rotate: 104.4deg;
+  }
+  30% {
+    rotate: 108deg;
+  }
+  31% {
+    rotate: 111.6deg;
+  }
+  32% {
+    rotate: 115.2deg;
+  }
+  33% {
+    rotate: 118.8deg;
+  }
+  34% {
+    rotate: 122.4deg;
+  }
+  35% {
+    rotate: 126deg;
+  }
+  36% {
+    rotate: 129.6deg;
+  }
+  37% {
+    rotate: 133.2deg;
+  }
+  38% {
+    rotate: 136.8deg;
+  }
+  39% {
+    rotate: 140.4deg;
+  }
+  40% {
+    rotate: 144deg;
+  }
+  41% {
+    rotate: 147.6deg;
+  }
+  42% {
+    rotate: 151.2deg;
+  }
+  43% {
+    rotate: 154.8deg;
+  }
+  44% {
+    rotate: 158.4deg;
+  }
+  45% {
+    rotate: 162deg;
+  }
+  46% {
+    rotate: 165.6deg;
+  }
+  47% {
+    rotate: 169.2deg;
+  }
+  48% {
+    rotate: 172.8deg;
+  }
+  49% {
+    rotate: 176.4deg;
+  }
+  50% {
+    rotate: 180deg;
+  }
+  51% {
+    rotate: 183.6deg;
+  }
+  52% {
+    rotate: 187.2deg;
+  }
+  53% {
+    rotate: 190.8deg;
+  }
+  54% {
+    rotate: 194.4deg;
+  }
+  55% {
+    rotate: 198deg;
+  }
+  56% {
+    rotate: 201.6deg;
+  }
+  57% {
+    rotate: 205.2deg;
+  }
+  58% {
+    rotate: 208.8deg;
+  }
+  59% {
+    rotate: 212.4deg;
+  }
+  60% {
+    rotate: 216deg;
+  }
+  61% {
+    rotate: 219.6deg;
+  }
+  62% {
+    rotate: 223.2deg;
+  }
+  63% {
+    rotate: 226.8deg;
+  }
+  64% {
+    rotate: 230.4deg;
+  }
+  65% {
+    rotate: 234deg;
+  }
+  66% {
+    rotate: 237.6deg;
+  }
+  67% {
+    rotate: 241.2deg;
+  }
+  68% {
+    rotate: 244.8deg;
+  }
+  69% {
+    rotate: 248.4deg;
+  }
+  70% {
+    rotate: 252deg;
+  }
+  71% {
+    rotate: 255.6deg;
+  }
+  72% {
+    rotate: 259.2deg;
+  }
+  73% {
+    rotate: 262.8deg;
+  }
+  74% {
+    rotate: 266.4deg;
+  }
+  75% {
+    rotate: 270deg;
+  }
+  76% {
+    rotate: 273.6deg;
+  }
+  77% {
+    rotate: 277.2deg;
+  }
+  78% {
+    rotate: 280.8deg;
+  }
+  79% {
+    rotate: 284.4deg;
+  }
+  80% {
+    rotate: 288deg;
+  }
+  81% {
+    rotate: 291.6deg;
+  }
+  82% {
+    rotate: 295.2deg;
+  }
+  83% {
+    rotate: 298.8deg;
+  }
+  84% {
+    rotate: 302.4deg;
+  }
+  85% {
+    rotate: 306deg;
+  }
+  86% {
+    rotate: 309.6deg;
+  }
+  87% {
+    rotate: 313.2deg;
+  }
+  88% {
+    rotate: 316.8deg;
+  }
+  89% {
+    rotate: 320.4deg;
+  }
+  90% {
+    rotate: 324deg;
+  }
+  91% {
+    rotate: 327.6deg;
+  }
+  92% {
+    rotate: 331.2deg;
+  }
+  93% {
+    rotate: 334.8deg;
+  }
+  94% {
+    rotate: 338.4deg;
+  }
+  95% {
+    rotate: 342deg;
+  }
+  96% {
+    rotate: 345.6deg;
+  }
+  97% {
+    rotate: 349.2deg;
+  }
+  98% {
+    rotate: 352.8deg;
+  }
+  99% {
+    rotate: 356.4deg;
+  }
+  100% {
+    rotate: 360deg;
+  }
+}
+header {
+  text-align: center;
+  width: 100%;
+  background-color: #FFFFFF;
+}
+header .nav_logo {
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
+  padding: 14px 89px;
+}
+header .nav_logo_title {
+  font-size: 1.875rem;
+  font-family: "Shrikhand", cursive;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  color: #000000;
+}
+
+/* STYLE POUR LE BOUTON PRINCIPAL */
+.main_btn {
+  width: 218px;
+  height: 50px;
+  background: linear-gradient(175deg, rgb(147, 86, 220) 0%, rgb(255, 121, 218) 100%);
+  border-radius: 25px;
+  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
+  border: none;
+  font-size: 1rem;
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  color: #FFFFFF;
+  padding: 13px 18.75px;
+  margin-top: 27px;
+  margin-bottom: 57px;
+  transition: box-shadow 200ms ease, opacity 200ms ease;
+}
+.main_btn:hover {
+  animation: btnChange 200ms;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  cursor: pointer;
+  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.35);
+}
+
+/* ANIMATION POUR LE BOUTON PRINCIPAL */
+@keyframes btnChange {
+  0% {
+    opacity: 1;
+  }
+  30% {
+    opacity: 0.95;
+  }
+  60% {
+    opacity: 0.9;
+  }
+  100% {
+    opacity: 0.85;
+  }
+}
+/* STYLE POUR LE COEUR */
+.heart_logo,
+.heart_filled {
+  width: 22px;
+  height: 21px;
+  position: absolute;
+  right: 25px;
+  bottom: 33px;
+  background-size: cover;
+  transition: opacity 200ms ease-in;
+}
+
+.heart_filled {
+  opacity: 0;
+}
+
+/* Factorisation des sélecteurs pour les coeurs */
+/* Commencez à partir du sélecteur initial */
+[id^=heart_toggle_]:checked ~ .heart_filled {
+  opacity: 1;
+}
+
+/* Utilisez la même logique pour cacher le coeur vide */
+[id^=heart_toggle_]:checked ~ .heart_logo {
+  opacity: 0;
+}
+
+.hide_checkbox {
+  position: absolute;
+  left: -9999px;
+}
+
+/* FOOTER */
+.footer {
+  display: flex;
+  flex-direction: column;
+  background: #353535;
+  padding: 22px 25px;
+  gap: 16px;
+}
+.footer_title {
+  font-size: 1.125rem;
+  font-family: "Shrikhand", cursive;
+  font-weight: 400;
+  font-style: normal;
+  line-height: normal;
+  color: #FFFFFF;
+}
+.footer_container {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+.footer_link_container {
+  display: flex;
+  gap: 11px;
+}
+.footer_text {
+  font-size: 1rem;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  line-height: normal;
+  color: #FFFFFF;
+}
+.footer_text a {
+  color: #FFFFFF;
+}
+
+/* style général /////////////////////////////////////////*/
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.body_container {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  background: #F6F6F6;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* HEADER /////////////////////////////////////////*/
+.nav_location {
+  display: flex;
+  gap: 17px;
+  background-color: #EAEAEA;
+  align-items: center;
+  justify-content: center;
+  height: 3.125rem;
+  /*50px*/
+}
+.nav_location_logo {
+  width: 12px;
+  height: 16px;
+}
+.nav_location_text {
+  font-size: 1rem;
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  color: #353535;
+}
+
+/* CTA ////////////////////////////////////////*/
+.cta {
+  height: 18rem;
+  /*287px*/
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  background-color: #F6F6F6;
+  align-items: center;
+}
+.cta .main_title {
+  font-size: 1.5rem;
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  color: #000000;
+  margin-top: 39px;
+}
+.cta .motto {
+  font-size: 1.125rem;
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+  color: #353535;
+}
+
+/* HOW TO //////////////////////////////////////////////*/
+.how_to {
+  background-color: #FFFFFF;
+  padding: 48px 20px 68px 20px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+.how_to_title {
+  font-size: 1.5rem;
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  color: #000000;
+}
+.how_to_container {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  align-items: center;
+}
+.how_to_logo {
+  width: 13px;
+  height: 20px;
+  padding-left: 34px;
+}
+.how_to_text {
+  font-size: 1rem;
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  color: #000000;
+  padding-top: 28px;
+  padding-bottom: 28px;
+}
+.how_to_card {
+  width: 20.15rem;
+  /*322.5px*/
+  min-width: 290px;
+  height: 4.56rem;
+  /*73px*/
+  background: #F6F6F6;
+  border-radius: 20px;
+  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
+  align-items: center;
+  display: flex;
+  gap: 27px;
+  position: relative;
+}
+.how_to_card .label_circle {
+  position: absolute;
+  top: 32px;
+  left: -12px;
+  display: flex;
+  border-radius: 50px;
+  width: 24px;
+  height: 24px;
+  justify-content: center;
+  align-items: center;
+  background-color: #9356DC;
+  font-size: 0.875rem;
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  color: #FFFFFF;
+}
+
+/* RESTAURANTS //////////////////////////////////////////////*/
+.restaurants {
+  background: #F6F6F6;
+  padding: 54px 18px 66px 18px;
+}
+.restaurants_main_title {
+  font-size: 1.5rem;
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  color: #000000;
+  padding-bottom: 24px;
+}
+.restaurants_container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 18px;
+  justify-content: center;
+}
+.restaurants_container_card {
+  width: 90.5%;
+  max-width: 450px;
+  min-width: 340px;
+  height: 251px;
+  background: #FFFFFF;
+  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1);
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  position: relative;
+}
+.restaurants_container_card .image_card_container img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  height: 174px;
+  border-radius: 15px 15px 0 0;
+}
+.restaurants_container_card .image_card_container .label_flag {
+  width: 80px;
+  height: 22px;
+  background-color: #99E2D0;
+  border-radius: 2px;
+  font-size: 0.875rem;
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  color: #008766;
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  text-align: center;
+  padding-top: 7px;
+}
+.restaurants_container_card .bottom_card_container {
+  height: 77px;
+  padding-left: 13px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  position: relative;
+}
+.restaurants_container_card .bottom_card_container_title {
+  font-size: 1.125rem;
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  color: #000000;
+}
+.restaurants_container_card .bottom_card_container_text {
+  font-size: 1.063rem;
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+  color: #000000;
+}
+
+/* MEDIA QUERIES DESKTOP */
+@media (min-width: 1024px) {
+  .body_container {
+    gap: 30px;
+  }
+  .cta {
+    gap: 18px;
+  }
+  .how_to {
+    padding-left: 180px;
+    padding-right: 180px;
+  }
+  .how_to_container {
+    flex-direction: row;
+    justify-content: center;
+    gap: 36px;
+  }
+  .restaurants {
+    padding-left: 180px;
+    padding-right: 180px;
+  }
+  .restaurants_container {
+    -moz-column-gap: 100px;
+         column-gap: 100px;
+    row-gap: 50px;
+  }
+  .restaurants_container_card {
+    width: 490px;
+  }
+  .footer {
+    flex-direction: row-reverse;
+  }
+  .footer_container {
+    flex-direction: row;
+  }
+  .footer .footer_link_container {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: baseline;
+  }
+}
+@media (min-width: 768px) {
+  .cta {
+    gap: 18px;
+  }
+  .restaurants_container_card {
+    width: 40.5%;
+    max-width: 450px;
+    min-width: 340px;
+  }
+}/*# sourceMappingURL=main.css.map */

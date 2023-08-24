@@ -1,0 +1,344 @@
+  /* IMPORT */
+
+  @import"../sass/utils/variables";
+  @import"../sass/base/animations";
+  @import"../sass/layouts/header";
+  @import"../sass/components/components";
+  @import"../sass/layouts/footer";
+
+
+  /* style général /////////////////////////////////////////*/
+  * {
+    margin: 0;
+    padding: 0;
+  }
+
+  .body_container {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    background: $background;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+
+  /* HEADER /////////////////////////////////////////*/
+
+  .nav_location {
+    display: flex;
+    gap: 17px;
+    background-color: $light-grey;
+    align-items: center;
+    justify-content: center;
+    height: 3.125rem;
+    /*50px*/
+
+    &_logo {
+      width: 12px;
+      height: 16px;
+    }
+
+    &_text {
+      font-size: $button-font-size;
+      font-family: $button-font-family;
+      font-style: $button-font-style;
+      font-weight: $button-font-weight;
+      line-height: $button-line-height;
+      color: $dark-grey;
+    }
+  }
+
+  /* CTA ////////////////////////////////////////*/
+
+  .cta {
+    height: 18rem;
+    /*287px*/
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    background-color: $background;
+    align-items: center;
+
+    .main_title {
+      font-size: $main-title-font-size;
+      font-family: $main-title-font-family;
+      font-style: $main-title-font-style;
+      font-weight: $main-title-font-weight;
+      line-height: $main-title-line-height;
+      color: $black;
+      margin-top: 39px;
+    }
+
+    .motto {
+      font-size: $motto-font-size;
+      font-family: $motto-font-family;
+      font-style: $motto-font-style;
+      font-weight: $motto-font-weight;
+      line-height: $motto-line-height;
+      color: $dark-grey;
+    }
+
+  }
+
+  /* HOW TO //////////////////////////////////////////////*/
+
+  .how_to {
+    background-color: $white;
+    padding: 48px 20px 68px 20px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+
+    &_title {
+      font-size: $main-title-font-size;
+      font-family: $main-title-font-family;
+      font-style: $main-title-font-style;
+      font-weight: $main-title-font-weight;
+      line-height: $main-title-line-height;
+      color: $black;
+    }
+
+    &_container {
+      display: flex;
+      flex-direction: column;
+      gap: 25px;
+      align-items: center;
+    }
+
+    &_logo {
+      width: 13px;
+      height: 20px;
+      padding-left: 34px;
+    }
+
+    &_text {
+      font-size: $button-font-size;
+      font-family: $button-font-family;
+      font-style: $button-font-style;
+      font-weight: $button-font-weight;
+      line-height: $button-line-height;
+      color: $black;
+      padding-top: 28px;
+      padding-bottom: 28px;
+    }
+
+    &_card {
+      width: 20.15rem;
+      /*322.5px*/
+      min-width: 290px;
+      height: 4.56rem;
+      /*73px*/
+
+      background: $background;
+      border-radius: 20px;
+      box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
+      align-items: center;
+      display: flex;
+      gap: 27px;
+      position: relative;
+
+      .label_circle {
+        position: absolute;
+        top: 32px;
+        left: -12px;
+        display: flex;
+        border-radius: 50px;
+        width: 24px;
+        height: 24px;
+        justify-content: center;
+        align-items: center;
+        background-color: $prim;
+        font-size: $label-font-size;
+        font-family: $label-font-family;
+        font-style: $label-font-style;
+        font-weight: $label-font-weight;
+        line-height: $label-line-height;
+        color: $white;
+      }
+
+    }
+
+  }
+
+  /* RESTAURANTS //////////////////////////////////////////////*/
+
+
+  .restaurants {
+    background: $background;
+    padding: 54px 18px 66px 18px;
+
+    &_main_title {
+      font-size: $main-title-font-size;
+      font-family: $main-title-font-family;
+      font-style: $main-title-font-style;
+      font-weight: $main-title-font-weight;
+      line-height: $main-title-line-height;
+      color: $black;
+      padding-bottom: 24px;
+
+    }
+
+    &_container {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      gap: 18px;
+      justify-content: center;
+
+      &_card {
+        width: 90.5%;
+        max-width: 450px;
+        min-width: 340px;
+        height: 251px;
+        background: $white;
+        box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.10);
+        border-radius: 15px;
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        position: relative;
+
+        .image_card_container {
+
+          img {
+            object-fit: cover;
+            width: 100%;
+            height: 174px;
+            border-radius: 15px 15px 0 0;
+          }
+
+          .label_flag {
+            width: 80px;
+            height: 22px;
+            background-color: $ter;
+            border-radius: 2px;
+            font-size: $label-font-size;
+            font-family: $label-font-family;
+            font-style: $label-font-style;
+            font-weight: $label-font-weight;
+            line-height: $label-line-height;
+            color: $green-font;
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            text-align: center;
+            padding-top: 7px;
+          }
+        }
+
+        .bottom_card_container {
+          height: 77px;
+          padding-left: 13px;
+          display: flex;
+          flex-direction: column;
+          gap: 5px;
+          position: relative;
+
+
+          &_title {
+            font-size: $card-title-font-size;
+            font-family: $card-title-font-family;
+            font-style: $card-title-font-style;
+            font-weight: $card-title-font-weight;
+            line-height: $card-title-line-height;
+            color: $black;
+          }
+
+          &_text {
+            font-size: $card-text-font-size;
+            font-family: $card-text-font-family;
+            font-style: $card-text-font-style;
+            font-weight: $card-text-font-weight;
+            line-height: $card-text-line-height;
+            color: $black;
+          }
+
+        }
+      }
+
+    }
+
+  }
+
+  /* MEDIA QUERIES DESKTOP */
+
+  @media (min-width: 1024px) {
+
+    .body_container {
+      gap: 30px;
+    }
+
+    .cta {
+      gap: 18px;
+
+    }
+
+    .how_to {
+      padding-left: 180px;
+      padding-right: 180px;
+    }
+
+    .how_to_container {
+      flex-direction: row;
+      justify-content: center;
+      gap: 36px;
+
+    }
+
+
+    .restaurants {
+      padding-left: 180px;
+      padding-right: 180px;
+    }
+
+    .restaurants_container {
+      column-gap: 100px;
+      row-gap: 50px;
+    }
+
+
+    .restaurants_container_card {
+      width: 490px;
+    }
+
+
+    .footer {
+      flex-direction: row-reverse;
+
+      &_container {
+        flex-direction: row;
+      }
+
+      .footer_link_container {
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: baseline;
+
+
+      }
+
+    }
+
+  }
+
+  @media (min-width: 768px) {
+
+
+    .cta {
+      gap: 18px;
+
+    }
+
+    .restaurants_container_card {
+      width: 40.5%;
+      max-width: 450px;
+      min-width: 340px;
+    }
+
+    .footer {}
+
+  }
