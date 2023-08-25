@@ -18,8 +18,6 @@
     margin-bottom: 57px;
     transition: box-shadow 200ms ease, opacity 200ms ease; // liser la sortie de l'animation 
 
-    
-
     &:hover {
       animation: btnChange 200ms;
       animation-iteration-count: 1; // nombre d'itérations de l'animation

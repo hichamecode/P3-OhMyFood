@@ -1,14 +1,17 @@
   /* IMPORT */
 
   @import"../sass/utils/variables";
+  @import"../sass/base/normalize";
+  @import"../sass/components/components";
   @import"../sass/base/animations";
   @import"../sass/layouts/header";
-  @import"../sass/components/components";
   @import"../sass/layouts/footer";
+  @import"../sass/pages/restaurant";
 
 
-  /* style général /////////////////////////////////////////*/
-  * {
+  // style général /////////////////////////////////////////*/
+
+   * {
     margin: 0;
     padding: 0;
   }
@@ -127,12 +130,9 @@
     }
 
     &_card {
-      width: 20.15rem;
-      /*322.5px*/
-      min-width: 290px;
+      min-width: 18.125rem; /*290px*/
       height: 4.56rem;
       /*73px*/
-
       background: $background;
       border-radius: 20px;
       box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
@@ -191,9 +191,9 @@
 
       &_card {
         width: 90.5%;
-        max-width: 450px;
-        min-width: 340px;
-        height: 251px;
+        max-width: 28.75rem; /*460px*/
+        min-width: 19.375rem; /*310px*/
+        height: 15.69rem; /*251px*/
         background: $white;
         box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.10);
         border-radius: 15px;
@@ -207,7 +207,7 @@
           img {
             object-fit: cover;
             width: 100%;
-            height: 174px;
+            height: 10.875rem; /*174px*/
             border-radius: 15px 15px 0 0;
           }
 
@@ -231,7 +231,7 @@
         }
 
         .bottom_card_container {
-          height: 77px;
+          height: 4.81rem; /*77px*/
           padding-left: 13px;
           display: flex;
           flex-direction: column;
@@ -264,7 +264,26 @@
 
   }
 
-  /* MEDIA QUERIES DESKTOP */
+  /* MEDIA QUERY TABLET *///////////////
+
+  @media (min-width: 768px) {
+
+    .cta {
+      gap: 18px;
+    }
+
+    .restaurants_container_card {
+      width: 40.5%;
+      max-width: 450px;
+      min-width: 340px;
+    }
+
+    .footer {
+      align-items: center;
+    }
+  }
+
+  /* MEDIA QUERY DESKTOP *//////////////////////////////
 
   @media (min-width: 1024px) {
 
@@ -274,39 +293,19 @@
 
     .cta {
       gap: 18px;
-
-    }
-
-    .how_to {
-      padding-left: 180px;
-      padding-right: 180px;
     }
 
     .how_to_container {
       flex-direction: row;
       justify-content: center;
       gap: 36px;
-
-    }
-
-
-    .restaurants {
-      padding-left: 180px;
-      padding-right: 180px;
     }
 
     .restaurants_container {
-      column-gap: 100px;
-      row-gap: 50px;
+      gap: 36px;
     }
 
-
-    .restaurants_container_card {
-      width: 490px;
-    }
-
-
-    .footer {
+  .footer {
       flex-direction: row-reverse;
 
       &_container {
@@ -317,28 +316,78 @@
         flex-direction: row;
         flex-wrap: wrap;
         align-items: baseline;
-
-
       }
-
     }
+    }
+
+  /* MEDIA QUERY LARGE DESKTOP *////////////////////////////////
+
+  @media (min-width: 1440px) {
+
+    .body_container {
+      max-width: 1440px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .how_to {
+     padding-left: 11.25rem; /*180px*/
+      padding-right: 11.25rem; /*180px*/
+    }
+
+     .restaurants {
+      padding-left: 11.25rem; /*180px*/
+      padding-right: 11.25rem; /*180px*/
+    }
+
+     .restaurants_container {
+       column-gap: 6.25rem; /*100px*/
+       row-gap: 3.125rem; /*50px*/
+     }
+
+    // .restaurants_container_card {
+    //    width: 450px;
+    //    max-width: 490px;
+    //  }
 
   }
 
-  @media (min-width: 768px) {
+  /*//////////////////////////////////////*/
 
 
-    .cta {
-      gap: 18px;
+  .main_btn {
+    width: 218px;
+    height: 50px;
+    background: linear-gradient(175deg, rgba(147, 86, 220, 1) 0%, rgba(255, 121, 218, 1) 100%);
+    border-radius: 25px;
+    box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
+    border: none;
+    font-size: $button-font-size;
+    font-family: $button-font-family;
+    font-style: $button-font-style;
+    font-weight: $button-font-weight;
+    line-height: $button-line-height;
+    color: $white;
+    padding: 13px 18.75px;
+    margin-top: 27px;
+    margin-bottom: 57px;
+    transition: box-shadow 200ms ease, opacity 200ms ease; // liser la sortie de l'animation 
 
+    
+
+    &:hover {
+      animation: btnChange 200ms;
+      animation-iteration-count: 1; // nombre d'itérations de l'animation
+      animation-fill-mode: forwards; // reste sur le dernier étape de l'animation
+      cursor: pointer;
+      box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.35);
     }
-
-    .restaurants_container_card {
-      width: 40.5%;
-      max-width: 450px;
-      min-width: 340px;
-    }
-
-    .footer {}
-
   }
+
+  // @media (min-width: 1440px) {
+  //   .restaurants_container {
+  //     row-gap: 50px;
+  //     column-gap: 100px;
+  //   }
+
+  // }

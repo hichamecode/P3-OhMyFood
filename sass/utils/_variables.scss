@@ -1,4 +1,4 @@
-    /* colors /////////////////////////////////////////*/
+    /* COLORS /////////////////////////////////////////*/
   
     $prim:#9356DC;
     $sec:#FF79DA;
@@ -15,7 +15,7 @@
     $black:#000000;
     $white:#FFFFFF;
   
-    /* fonts //////////////////////////////////////*/
+    /* FONTS //////////////////////////////////////*/
   
     /* logo */
   
@@ -25,6 +25,15 @@
     $logo-font-weight:400;
     $logo-line-height:normal;
     $logo-color: $black;
+
+    /* menu container title */
+
+    $menu-container-font-size: 1.75rem; /*28px*/
+    $menu-container-font-family: 'Shrikhand', cursive;
+    $menu-container-font-style: normal;
+    $menu-container-font-weight: 400;
+    $menu-container-line-height: normal;
+    $menu-container-color: $black;
   
     /* button */
   
@@ -98,4 +107,4 @@
     $footer-text-line-height:normal;
     $footer-text-color:$black;
   
-  /* /////////////////////////////////////////////////*/
+  /* END /////////////////////////////////////////////////*/

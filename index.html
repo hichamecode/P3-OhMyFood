@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 
 <head>
     <meta charset="UTF-8">
@@ -10,25 +10,26 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/assets/main.css">
+    <link rel="stylesheet" href="assets/main.css">
     <title>Oh My Food !</title>
 </head>
 
 <body>
     <div class="body_container">
-        <div class="plate_container">
+        <div class="plate_container"> <!-- Animation du loader -->
             <div class="plate">
-              <img src="/assets/logos/logos-animation/ohmyfood@2x.svg" alt="">
-              <div class="inner_circle"></div>
+                <div class="inner_circle">
+                    <img src="assets/logos/logos-animation/ohmyfood@2x.svg" alt="logo ohmyfood">
+                </div>
+
             </div>
             <div class="fork_one">
-              <img src="/assets/logos/logos-animation/fork_real.png" alt="">
+                <img src="assets/logos/logos-animation/fork_real.png" alt="animation fourchette">
             </div>
             <div class="fork_two">
-              <img src="/assets/logos/logos-animation/fork_real.png" alt="">
-        
+                <img src="assets/logos/logos-animation/fork_real.png" alt="animation fourchette">
             </div>
-          </div>
+        </div>
         <header>
             <div class="nav_logo">
                 <h2 class="nav_logo_title">ohmyfood</h2>
@@ -41,9 +42,9 @@
         <article class="cta">
             <h1 class="main_title">Réservez le menu qui vous convient</h1>
             <p class="motto">Découvrez des restaurants d'exception, sélectionnés par nos soins.</p>
-            <a href="#rest"><button class="main_btn">Explorez nos restaurants</button></a>
+            <a href="#rest"><button class="main_btn">Explorez nos restaurants</button></a> 
         </article>
-        <div class="how_to">
+        <section class="how_to">
             <h2 class="how_to_title">Fonctionnement</h2>
             <div class="how_to_container">
                 <div class="how_to_card one">
@@ -62,79 +63,79 @@
                     <p class="how_to_text">Dégustez au restaurant</p>
                 </div>
             </div>
-        </div>
-        <div class="restaurants">
+        </section>
+        <section class="restaurants">
             <h2 class="restaurants_main_title" id="rest">Restaurants</h2>
             <div class="restaurants_container">
-                <a class="restaurants_container_card" href="/restaurants/lpdg.html">
-                    <div class="image_card_container new">
+                <a class="restaurants_container_card" href="restaurants/lpdg.html">
+                    <header class="image_card_container new">
                         <span class="label_flag">Nouveau</span>
-                        <img src="/assets/images/la-palette-du-gout.jpg" alt="La palette du goût">
-                    </div>
-                    <div class="bottom_card_container">
+                        <img src="assets/images/la-palette-du-gout.jpg" alt="La palette du goût">
+                    </header>
+                    <article class="bottom_card_container">
                         <h3 class="bottom_card_container_title">La palette du goût</h3>
                         <p class="bottom_card_container_text">Ménilmontant</p>
                         <label for="heart_toggle_1">
                             <input type="checkbox" class="hide_checkbox" id="heart_toggle_1">
-                            <img class="heart_logo" src="/assets/logos/new_heart.svg" alt="logo coeur">
-                            <img class="heart_filled" src="/assets/logos/Like.svg" alt="coeur plein">
+                            <img class="heart_logo" src="assets/logos/new_heart.svg" alt="logo coeur">
+                            <img class="heart_filled" src="assets/logos/Like.svg" alt="coeur plein">
                         </label>
-                    </div>
+                    </article>
                 </a>
-                <a class="restaurants_container_card" href="/restaurants/lne.html">
-                    <div class="image_card_container new">
+                <a class="restaurants_container_card" href="restaurants/lne.html">
+                    <header class="image_card_container new">
                         <span class="label_flag">Nouveau</span>
-                        <img src="/assets/images/la-note-enchantee.jpg" alt="La note enchantée">
-                    </div>
-                    <div class="bottom_card_container">
+                        <img src="assets/images/la-note-enchantee.jpg" alt="La note enchantée">
+                    </header>
+                    <article class="bottom_card_container">
                         <h3 class="bottom_card_container_title">La note enchantée</h3>
                         <p class="bottom_card_container_text">Charonne</p>
                         <label for="heart_toggle_2">
                             <input type="checkbox" class="hide_checkbox" id="heart_toggle_2">
-                            <img class="heart_logo" src="/assets/logos/new_heart.svg" alt="logo coeur">
-                            <img class="heart_filled" src="/assets/logos/Like.svg" alt="coeur plein">
+                            <img class="heart_logo" src="assets/logos/new_heart.svg" alt="logo coeur">
+                            <img class="heart_filled" src="assets/logos/Like.svg" alt="coeur plein">
                         </label>
-                    </div>
+                    </article>
                 </a>
-                <a class="restaurants_container_card" href="/restaurants/alf.html">
-                    <div class="image_card_container">
-                        <img src="/assets/images/a-la-francaise.jpg" alt="A la française">
-                    </div>
-                    <div class="bottom_card_container">
+                <a class="restaurants_container_card" href="restaurants/alf.html">
+                    <header class="image_card_container">
+                        <img src="assets/images/a-la-francaise.jpg" alt="A la française">
+                    </header>
+                    <article class="bottom_card_container">
                         <h3 class="bottom_card_container_title">A la française</h3>
                         <p class="bottom_card_container_text">Cité Rouge</p>
                         <label for="heart_toggle_3">
                             <input type="checkbox" class="hide_checkbox" id="heart_toggle_3">
-                            <img class="heart_logo" src="/assets/logos/new_heart.svg" alt="logo coeur">
-                            <img class="heart_filled" src="/assets/logos/Like.svg" alt="coeur plein">
+                            <img class="heart_logo" src="assets/logos/new_heart.svg" alt="logo coeur">
+                            <img class="heart_filled" src="assets/logos/Like.svg" alt="coeur plein">
                         </label>
-                    </div>
+                    </article>
                 </a>
-                <a class="restaurants_container_card" href="/restaurants/ldds.html">
-                    <div class="image_card_container">
-                        <img src="/assets/images/le-delice-des-sens.jpg" alt="Le délice des sens">
-                    </div>
-                    <div class="bottom_card_container">
+                <a class="restaurants_container_card" href="restaurants/ldds.html">
+                    <header class="image_card_container">
+                        <img src="assets/images/le-delice-des-sens.jpg" alt="Le délice des sens">
+                    </header>
+                    <article class="bottom_card_container">
                         <h3 class="bottom_card_container_title">Le délice des sens</h3>
                         <p class="bottom_card_container_text">Folie-Méricourt</p>
                         <label for="heart_toggle_4">
                             <input type="checkbox" class="hide_checkbox" id="heart_toggle_4">
-                            <img class="heart_logo" src="/assets/logos/new_heart.svg" alt="logo coeur">
-                            <img class="heart_filled" src="/assets/logos/Like.svg" alt="coeur plein">
+                            <img class="heart_logo" src="assets/logos/new_heart.svg" alt="logo coeur">
+                            <img class="heart_filled" src="assets/logos/Like.svg" alt="coeur plein">
                         </label>
-                    </div>
+                    </article>
                 </a>
             </div>
-        </div>
+        </section>
         <footer class="footer">
             <h3 class="footer_title">ohmyfood</h3>
             <div class="footer_container">
                 <div class="footer_link_container">
-                    <img src="/assets/logos/fork.svg" alt="fork logo">
+                    <img src="assets/logos/fork.svg" alt="fork logo">
                     <p class="footer_text">Proposer un restaurant</p>
                 </div>
                 <div class="footer_link_container">
-                    <img src="/assets/logos/handshake.svg" alt="handshake logo">
+                    <img src="assets/logos/handshake.svg" alt="handshake logo">
                     <p class="footer_text">Devenir partenaire</p>
                 </div>
                 <p class="footer_text">Mentions légales</p>
@@ -143,5 +144,6 @@
         </footer>
     </div>
 </body>
+
 </html>
 
