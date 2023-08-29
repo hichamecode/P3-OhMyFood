@@ -2,47 +2,178 @@
 .body_container_restaurant {
     display: flex;
     flex-direction: column;
-    gap: 0;
-
 }
 
-// .nav_logo {
-//     display: flex;
-//     justify-content: space-between;
-//     z-index: 0;
-// }
+.nav_logo {
+
+    &_go_back {
+        position: absolute;
+        left: 10px;
+    }
+}
 
 .image_container {
     height: 275px;
-
 }
 
 .image_container img {
     height: 275px;
     width: 100%;
+    object-fit: cover;
 }
 
 .menu_container {
     background: $background;
     z-index: 1;
-    border-radius: 15%;
+    border-radius: 0%;
     display: flex;
     flex-direction: column;
+    gap: 40px;
+    margin-top: -40px;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
 
     .menu_title_container {
         display: flex;
         align-items: center;
-        justify-content: flex-start;
+        justify-content: space-between;
         gap: 24px;
         padding: 0 17px;
+
+        .heart_logo, .heart_filled {
+         // position absolute mais se décale lors du responsive
+
+        }
     }
 
     .menu_title {
-        font-size: $menu-container-font-size;
-        font-family: $menu-container-font-family;
-        font-style: $menu-container-font-style;
-        font-weight: $menu-container-font-weight;
-        line-height: $menu-container-line-height;
-        color: $menu-container-color;
+        font-size: $menu-title-font-size;
+        font-family: $menu-title-font-family;
+        font-style: $menu-title-font-style;
+        font-weight: $menu-title-font-weight;
+        line-height: $menu-title-line-height;
+        color: $menu-title-color;
     } 
 }
+
+.group_container_title {        
+    font-size: $group-title-font-size;
+    font-family: $group-tite-font-family;
+    font-style: $group-title-font-style;
+    font-weight: $group-title-font-weight;
+    line-height: $group-title-line-height;
+    color: $group-title-color;
+    text-transform: uppercase;
+    position: relative;
+    padding-bottom: 3px;
+
+    &::after {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        content: "";
+        border-bottom: $ter 3px solid;
+        width: 40px;
+    }
+}
+
+.group_container {
+
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding-left: 15px;
+    padding-right: 15px;
+    
+    &_cards {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        align-items: center;
+    }
+}
+
+.group_container_card {
+    width: 90%;
+    min-width: 18.125rem; /*290px*/
+    max-width: 26rem; /*416px*/
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    padding: 15px;
+    border-radius: 15px;
+    background-color: $white;
+    box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.10);
+
+    &_title {
+    font-size: $menu-card-title-font-size;
+    font-family: $menu-card-title-font-family;
+    font-style: $menu-card-title-font-style;
+    font-weight: $menu-card-title-font-weight;
+    line-height: $menu-card-title-line-height;
+    color: $menu-card-title-color;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    }
+
+    &_info {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+         .group_container_card_text {
+        font-size: $menu-card-text-font-size;
+        font-family: $menu-card-text-font-family;
+        font-style: $menu-card-text-font-style;
+        font-weight: $menu-card-text-font-weight;
+        line-height: $menu-card-text-line-height;
+        color: $menu-card-text-color;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+      .group_container_card_price {
+        font-size: $menu-card-price-font-size;
+        font-family: $menu-card-price-font-family;
+        font-style: $menu-card-price-font-style;
+        font-weight: $menu-card-price-font-weight;
+        line-height: $menu-card-price-line-height;
+        color: $menu-card-price-color;
+    }
+    }
+}
+
+.btn_container {
+    display: flex;
+    justify-content: center;
+}
+
+/* MEDIA QUERY RESPONSIVE DESKTOP */
+
+
+@media (min-width: 1024px) { 
+    .group_container_card {
+        max-width: 550px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .menu_container {
+        margin: auto; // fixer la largeur de menu_container pour garder de la cohérence
+        width: 1055px;
+        margin-top: -40px;
+    }
+}
+
+// @media (min-width: 1440px) {
+//     .body_container_restaurant {
+//         max-width: 1440px;
+//         margin: auto;
+//     }
+
+//     .image_container {
+//         border-radius: 30px;
+//     }
+
+// }
