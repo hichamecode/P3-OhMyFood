@@ -1,4 +1,3 @@
-
 .body_container_restaurant {
     display: flex;
     flex-direction: column;
@@ -40,8 +39,9 @@
         gap: 24px;
         padding: 0 17px;
 
-        .heart_logo, .heart_filled {
-         // position absolute mais se décale lors du responsive
+        .heart_logo,
+        .heart_filled {
+            // position absolute mais se décale lors du responsive
 
         }
     }
@@ -53,10 +53,10 @@
         font-weight: $menu-title-font-weight;
         line-height: $menu-title-line-height;
         color: $menu-title-color;
-    } 
+    }
 }
 
-.group_container_title {        
+.group_container_title {
     font-size: $group-title-font-size;
     font-family: $group-tite-font-family;
     font-style: $group-title-font-style;
@@ -84,75 +84,135 @@
     gap: 12px;
     padding-left: 15px;
     padding-right: 15px;
-    
+
     &_cards {
+        animation: appear;
         display: flex;
         flex-direction: column;
         gap: 12px;
         align-items: center;
     }
+
 }
+
+.group_one {
+    animation-delay: 0s;
+    animation: appearGroupOne ease-in-out 600ms forwards;
+}
+
+.group_two {
+    animation-delay: 300ms;
+    animation: appearGroupOne ease-in-out 900ms forwards;
+}
+
+.group_three {
+    animation-delay: 600ms;
+    animation: appearGroupOne ease-in-out 1200ms forwards;
+}
+
 
 .group_container_card {
     width: 90%;
-    min-width: 18.125rem; /*290px*/
-    max-width: 26rem; /*416px*/
-    height: auto;
+    height: 4.625rem; /*74px*/
+    box-sizing: border-box;
+    min-width: 18.125rem;
+    /*290px*/
+    max-width: 26rem;
+    /*416px*/
     display: flex;
-    flex-direction: column;
-    gap: 5px;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
     padding: 15px;
     border-radius: 15px;
     background-color: $white;
     box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.10);
+    cursor: pointer;
+    overflow: hidden; // permet à selected_label de ne pas dépasser de la card
 
-    &_title {
-    font-size: $menu-card-title-font-size;
-    font-family: $menu-card-title-font-family;
-    font-style: $menu-card-title-font-style;
-    font-weight: $menu-card-title-font-weight;
-    line-height: $menu-card-title-line-height;
-    color: $menu-card-title-color;
-    text-overflow: ellipsis;
-    overflow: hidden;
-    }
+    .group_container_header {
 
-    &_info {
         display: flex;
-        flex-direction: row;
-        justify-content: space-between;
+        flex-direction: column;
+        gap: 5px;
 
-         .group_container_card_text {
-        font-size: $menu-card-text-font-size;
-        font-family: $menu-card-text-font-family;
-        font-style: $menu-card-text-font-style;
-        font-weight: $menu-card-text-font-weight;
-        line-height: $menu-card-text-line-height;
-        color: $menu-card-text-color;
-        overflow: hidden;
-        text-overflow: ellipsis;
+        &_title {
+            font-size: $menu-card-title-font-size;
+            font-family: $menu-card-title-font-family;
+            font-style: $menu-card-title-font-style;
+            font-weight: $menu-card-title-font-weight;
+            line-height: $menu-card-title-line-height;
+            color: $menu-card-title-color;
+            text-overflow: ellipsis;
+            overflow: hidden;
+        }
+
+        &_text {
+            font-size: $menu-card-text-font-size;
+            font-family: $menu-card-text-font-family;
+            font-style: $menu-card-text-font-style;
+            font-weight: $menu-card-text-font-weight;
+            line-height: $menu-card-text-line-height;
+            color: $menu-card-text-color;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
     }
 
-      .group_container_card_price {
+ 
+}
+
+.group_container_card_info {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-self: flex-end;
+    gap: 15px;
+
+
+    .group_container_card_price {
         font-size: $menu-card-price-font-size;
         font-family: $menu-card-price-font-family;
         font-style: $menu-card-price-font-style;
         font-weight: $menu-card-price-font-weight;
         line-height: $menu-card-price-line-height;
         color: $menu-card-price-color;
+        justify-content: flex-end;
+        transition: all 400ms ease-in-out;
+
     }
+
+     .selected_container {
+    transition: all 400ms ease-in-out;
+    margin-right: -74px;
+
+    .selected_label {
+        height: 4.875rem; /*78px*/
+        width: 3.688rem; /*59px*/
+        object-fit: cover;
     }
+
 }
+
+}
+
+.group_container_card:hover .selected_container {
+    margin-right: -15px;
+}
+
+
 
 .btn_container {
     display: flex;
     justify-content: center;
 }
 
+
 /* MEDIA QUERY RESPONSIVE DESKTOP */
 
 
-@media (min-width: 1024px) { 
+@media (min-width: 1024px) {
     .group_container_card {
         max-width: 550px;
     }
@@ -166,14 +226,40 @@
     }
 }
 
-// @media (min-width: 1440px) {
-//     .body_container_restaurant {
-//         max-width: 1440px;
-//         margin: auto;
-//     }
+@media (min-width: 1440px) {
+    .body_container_restaurant {
+        max-width: 1440px;
+        margin: auto;
+    }
 
-//     .image_container {
-//         border-radius: 30px;
-//     }
+    .image_container img {
+        border-bottom-left-radius: 30px;
+        border-bottom-right-radius: 30px;
+    }
 
-// }
+}
+
+/* ANIMATION APPARITION DES GROUPES */
+
+@keyframes appearGroupOne {
+    0% {
+        opacity: 0;
+    }
+
+    25% {
+        opacity: 0.25;
+    }
+
+    50% {
+        opacity: 0.5;
+    }
+
+    75% {
+        opacity: 0.75;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+

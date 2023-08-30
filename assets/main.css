@@ -941,6 +941,7 @@ header .nav_logo_title {
     rotate: 360deg;
   }
 }
+/* ANIMATIONS PAGE RESTAURANTS */
 .body_container_restaurant {
   display: flex;
   flex-direction: column;
@@ -1017,26 +1018,53 @@ header .nav_logo_title {
   padding-right: 15px;
 }
 .group_container_cards {
+  animation: appear;
   display: flex;
   flex-direction: column;
   gap: 12px;
   align-items: center;
 }
 
+.group_one {
+  animation-delay: 0s;
+  animation: appearGroupOne ease-in-out 600ms forwards;
+}
+
+.group_two {
+  animation-delay: 300ms;
+  animation: appearGroupOne ease-in-out 900ms forwards;
+}
+
+.group_three {
+  animation-delay: 600ms;
+  animation: appearGroupOne ease-in-out 1200ms forwards;
+}
+
 .group_container_card {
   width: 90%;
-  min-width: 18.125rem; /*290px*/
-  max-width: 26rem; /*416px*/
-  height: auto;
+  height: 4.625rem; /*74px*/
+  box-sizing: border-box;
+  min-width: 18.125rem;
+  /*290px*/
+  max-width: 26rem;
+  /*416px*/
   display: flex;
-  flex-direction: column;
-  gap: 5px;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
   padding: 15px;
   border-radius: 15px;
   background-color: #FFFFFF;
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  overflow: hidden;
 }
-.group_container_card_title {
+.group_container_card .group_container_header {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.group_container_card .group_container_header_title {
   font-size: 1.125rem;
   font-family: "Roboto", sans-serif;
   font-style: normal;
@@ -1046,12 +1074,7 @@ header .nav_logo_title {
   text-overflow: ellipsis;
   overflow: hidden;
 }
-.group_container_card_info {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-}
-.group_container_card_info .group_container_card_text {
+.group_container_card .group_container_header_text {
   font-size: 0.94rem;
   font-family: "Roboto", sans-serif;
   font-style: normal;
@@ -1061,6 +1084,14 @@ header .nav_logo_title {
   overflow: hidden;
   text-overflow: ellipsis;
 }
+
+.group_container_card_info {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-self: flex-end;
+  gap: 15px;
+}
 .group_container_card_info .group_container_card_price {
   font-size: 0.94rem;
   font-family: "Roboto", sans-serif;
@@ -1068,6 +1099,22 @@ header .nav_logo_title {
   font-weight: 700;
   line-height: normal;
   color: #353535;
+  justify-content: flex-end;
+  transition: all 400ms ease-in-out;
+}
+.group_container_card_info .selected_container {
+  transition: all 400ms ease-in-out;
+  margin-right: -74px;
+}
+.group_container_card_info .selected_container .selected_label {
+  height: 4.875rem; /*78px*/
+  width: 3.688rem; /*59px*/
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.group_container_card:hover .selected_container {
+  margin-right: -15px;
 }
 
 .btn_container {
@@ -1086,6 +1133,34 @@ header .nav_logo_title {
     margin: auto;
     width: 1055px;
     margin-top: -40px;
+  }
+}
+@media (min-width: 1440px) {
+  .body_container_restaurant {
+    max-width: 1440px;
+    margin: auto;
+  }
+  .image_container img {
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+  }
+}
+/* ANIMATION APPARITION DES GROUPES */
+@keyframes appearGroupOne {
+  0% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 0.25;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  75% {
+    opacity: 0.75;
+  }
+  100% {
+    opacity: 1;
   }
 }
 * {
