@@ -2,10 +2,12 @@
 
   @import"../sass/utils/variables";
   @import"../sass/base/normalize";
-  @import"../sass/components/components";
-  @import"../sass/base/animations";
   @import"../sass/layouts/header";
   @import"../sass/layouts/footer";
+  @import"../sass/components/components";
+  @import"../sass/base/animations";
+  @import"../sass/base/animations_rest";
+  @import"../sass/pages/home";
   @import"../sass/pages/restaurant";
 
 
@@ -53,6 +55,7 @@
       color: $dark-grey;
     }
   }
+
 
   /* CTA ////////////////////////////////////////*/
 
@@ -256,6 +259,15 @@
             line-height: $card-text-line-height;
             color: $black;
           }
+
+          .heart_logo, .heart_filled {
+
+            position: absolute;
+            right: 25px;
+            bottom: 33px;
+          }   
+      
+             
 
         }
       }

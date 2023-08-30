@@ -41,11 +41,12 @@
    .heart_filled {
      width: 22px;
      height: 21px;
-     position: absolute;
-     right: 25px;
-     bottom: 33px;
+    //  position: absolute;
+    //  right: 25px;
+    // bottom: 33px;
      background-size: cover;
      transition: opacity 200ms ease-in;
+     cursor: pointer;
    }
 
    .heart_filled {

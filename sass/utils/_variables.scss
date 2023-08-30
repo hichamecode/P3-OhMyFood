@@ -15,7 +15,7 @@
     $black:#000000;
     $white:#FFFFFF;
   
-    /* FONTS //////////////////////////////////////*/
+    /* FONTS ACCUEIL //////////////////////////////////////*/
   
     /* logo */
   
@@ -25,15 +25,6 @@
     $logo-font-weight:400;
     $logo-line-height:normal;
     $logo-color: $black;
-
-    /* menu container title */
-
-    $menu-container-font-size: 1.75rem; /*28px*/
-    $menu-container-font-family: 'Shrikhand', cursive;
-    $menu-container-font-style: normal;
-    $menu-container-font-weight: 400;
-    $menu-container-line-height: normal;
-    $menu-container-color: $black;
   
     /* button */
   
@@ -107,4 +98,55 @@
     $footer-text-line-height:normal;
     $footer-text-color:$black;
   
+
+
+    /* FONTS RESTAURANTS */
+
+
+       /* menu title */
+
+       $menu-title-font-size: 1.75rem; /*28px*/
+       $menu-title-font-family: 'Shrikhand', cursive;
+       $menu-title-font-style: normal;
+       $menu-title-font-weight: 400;
+       $menu-title-line-height: normal;
+       $menu-title-color: $black;
+
+       /* group title */
+
+       $group-title-font-size: 16px;
+       $group-tite-font-family: 'Roboto', sans-serif;
+       $group-title-font-style: normal;
+       $group-title-font-weight: 300;
+       $group-title-line-height: normal;
+       $group-title-color: $black;
+
+        /* menu card title */
+  
+        $menu-card-title-font-size:1.125rem; /*18px*/
+        $menu-card-title-font-family:'Roboto', sans-serif;
+        $menu-card-title-font-style:normal;
+        $menu-card-title-font-weight:500;
+        $menu-card-title-line-height:normal;
+        $menu-card-title-color: $black;
+
+        /* menu card text */
+
+        $menu-card-text-font-size:0.94rem; /*15px*/
+        $menu-card-text-font-family:'Roboto', sans-serif;
+        $menu-card-text-font-style:normal;
+        $menu-card-text-font-weight:300;
+        $menu-card-text-line-height:normal;
+        $menu-card-text-color: $black;
+
+        /* menu card price */
+
+        $menu-card-price-font-size: 0.94rem; /*15px*/;
+        $menu-card-price-font-family:'Roboto', sans-serif;
+        $menu-card-price-font-style: normal; 
+        $menu-card-price-font-weight: 700;
+        $menu-card-price-line-height: normal;
+        $menu-card-price-color: #353535;
+
+
   /* END /////////////////////////////////////////////////*/

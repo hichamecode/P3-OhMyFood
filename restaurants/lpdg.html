@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,11 +13,12 @@
     <link rel="stylesheet" href="/assets/main.css">
     <title>Menu - La palette du goût</title>
 </head>
+
 <body>
     <div class="body_container_restaurant">
         <header>
             <div class="nav_logo">
-                <img class="nav_logo_go_back" src="/assets/logos/go-back.svg" alt="retour">
+                <a class="nav_logo_go_back" href="../index.html"><img src="/assets/logos/go-back.svg" alt="retour"></a>
                 <h2 class="nav_logo_title">ohmyfood</h2>
             </div>
         </header>
@@ -34,78 +36,160 @@
             </div>
             <section class="group_container">
                 <h2 class="group_container_title">Entrées</h2>
-                <article class="group_container_card">
-                    <h3 class="group_container_card_title">Fricassée d'escargots</h3>
-                    <p class="group_container_card_text">Au piment d'Espelette</p>
-                    <p class="group_container_card_price">25€</p>
-                </article>
-                <article class="group_container_card">
-                    <h3 class="group_container_card_title">Foie gras de canard mi-cuit</h3>
-                    <p class="group_container_card_text">Et ses copeaux de truffe noire</p>
-                    <p class="group_container_card_price">35€</p>
-                </article>
-                <article class="group_container_card">
-                    <h3 class="group_container_card_title">Œuf au plat</h3>
-                    <p class="group_container_card_text">Assaisonné à la truffe sur lit de caviar</p>
-                    <p class="group_container_card_price">20€</p>
-                </article>
+                <div class="group_container_cards group_one">
+                    <article class="group_container_card">
+                        <div class="group_container_header">
+                            <h3 class="group_container_header_title">Fricassée d'escargots</h3>
+                            <p class="group_container_header_text">Au piment d'Espelette</p>
+                        </div>
+                        <div class="group_container_card_info">
+                            <p class="group_container_card_price">25€</p>
+                               <div class="selected_container">
+                            <img src="/assets/logos/selected-label.svg" class="selected_label"
+                                alt="plat selectionné">
+                        </div>
+                        </div>
+                    </article>
+                    <article class="group_container_card">
+                        <div class="group_container_header">
+                             <h3 class="group_container_header_title">Foie gras de canard mi-cuit</h3>
+                              <p class="group_container_header_text">Et ses copeaux de truffe noire</p>
+                        </div>
+                        <div class="group_container_card_info">
+                            <p class="group_container_card_price">35€</p>
+                            <div class="selected_container">
+                                <img src="/assets/logos/selected-label.svg" class="selected_label"
+                                    alt="plat selectionné">
+                            </div>
+                        </div>
+                    </article>
+                    <article class="group_container_card">
+                        <div class="group_container_header">
+                            <h3 class="group_container_header_title">Œuf au plat</h3>
+                            <p class="group_container_header_text">Assaisonné à la truffe sur lit de caviar</p>
+                        </div>
+                        <div class="group_container_card_info">
+                            <p class="group_container_card_price">20€</p>
+                            <div class="selected_container">
+                                <img src="/assets/logos/selected-label.svg" class="selected_label"
+                                    alt="plat selectionné">
+                            </div>
+                        </div>
+                    </article>
+                </div>
             </section>
             <section class="group_container">
                 <h2 class="group_container_title">Plats</h2>
-                <article class="group_container_card">
-                    <h3 class="group_container_card_title">Filet de bœuf aux herbes</h3>
-                    <p class="group_container_card_text">Accompagné de sa ribambelle de légumes</p>
-                    <p class="group_container_card_price">40€</p>
-                </article>
-                <article class="group_container_card">
-                    <h3 class="group_container_card_title">Parmentier de queue de bœuf</h3>
-                    <p class="group_container_card_text">À la truffe noire sur sa purée de panais</p>
-                    <p class="group_container_card_price">35€</p>
-                </article>
-                <article class="group_container_card">
-                    <h3 class="group_container_card_title">Filet de turbot</h3>
-                    <p class="group_container_card_text">Aux agrumes</p>
-                    <p class="group_container_card_price">44€</p>
-                </article>
+                <div class="group_container_cards group_two">
+                    <article class="group_container_card">
+                        <div class="group_container_header">
+                            <h3 class="group_container_header_title">Filet de bœuf aux herbes</h3>
+                            <p class="group_container_header_text">Accompagné de sa ribambelle de légumes</p>
+                        </div>
+                        <div class="group_container_card_info">
+                            <p class="group_container_card_price">40€</p>
+                            <div class="selected_container">
+                                <img src="/assets/logos/selected-label.svg" class="selected_label"
+                                    alt="plat selectionné">
+                            </div>
+                        </div>
+                    </article>
+                    <article class="group_container_card">
+                        <div class="group_container_header">
+                            <h3 class="group_container_header_title">Parmentier de queue de bœuf</h3>
+                            <p class="group_container_header_text">À la truffe noire sur sa purée de panais</p>
+                        </div>
+                        <div class="group_container_card_info">
+                            <p class="group_container_card_price">35€</p>
+                            <div class="selected_container">
+                                <img src="/assets/logos/selected-label.svg" class="selected_label"
+                                    alt="plat selectionné">
+                            </div>
+                        </div>
+                    </article>
+                    <article class="group_container_card">
+                        <div class="group_container_header">
+                            <h3 class="group_container_header_title">Filet de turbot</h3>
+                            <p class="group_container_header_text">Aux agrumes</p>
+                        </div>
+                        <div class="group_container_card_info">
+                            <p class="group_container_card_price">44€</p>
+                            <div class="selected_container">
+                                <img src="/assets/logos/selected-label.svg" class="selected_label"
+                                    alt="plat selectionné">
+                            </div>
+                        </div>
+                    </article>
+                </div>
             </section>
             <section class="group_container">
                 <h2 class="group_container_title">Desserts</h2>
-                <article class="group_container_card">
-                    <h3 class="group_container_card_title">Paris-Brest</h3>
-                    <p class="group_container_card_text">Revisité</p>
-                    <p class="group_container_card_price">18€</p>
-                </article>
-                <article class="group_container_card">
-                    <h3 class="group_container_card_title">Macaron au chocolat d'exception</h3>
-                    <p class="group_container_card_text">Et glace à la vanille de Madagascar</p>
-                    <p class="group_container_card_price">22€</p>
-                </article>
-                <article class="group_container_card">
-                    <h3 class="group_container_card_title">Mousse au chocolat</h3>
-                    <p class="group_container_card_text">Au piment d'Espelette et à la truffe noire</p>
-                    <p class="group_container_card_price">23€</p>
-                </article>
+                <div class="group_container_cards group_three">
+                    <article class="group_container_card">
+                        <div class="group_container_header">
+                            <h3 class="group_container_header_title">Paris-Brest</h3>
+                            <p class="group_container_header_text">Revisité</p>
+                        </div>
+                        <div class="group_container_card_info">
+                            <p class="group_container_card_price">18€</p>
+                            <div class="selected_container">
+                                <img src="/assets/logos/selected-label.svg" class="selected_label"
+                                    alt="plat selectionné">
+                            </div>
+                        </div>
+                    </article>
+                    <article class="group_container_card">
+                        <div class="group_container_header">
+                            <h3 class="group_container_header_title">Macaron au chocolat d'exception</h3>
+                            <p class="group_container_header_text">Et glace à la vanille de Madagascar</p>
+                        </div>
+                        <div class="group_container_card_info">
+                            <p class="group_container_card_price">22€</p>
+                            <div class="selected_container">
+                                <img src="/assets/logos/selected-label.svg" class="selected_label"
+                                    alt="plat selectionné">
+                            </div>
+                        </div>
+                    </article>
+                    <article class="group_container_card">
+                        <div class="group_container_header">
+                            <h3 class="group_container_header_title">Mousse au chocolat</h3>
+                            <p class="group_container_header_text">Au piment d'Espelette et à la truffe noire</p>
+                        </div>
+                        <div class="group_container_card_info">
+                            <p class="group_container_card_price">23€</p>
+                            <div class="selected_container">
+                                <img src="/assets/logos/selected-label.svg" class="selected_label"
+                                    alt="plat selectionné">
+                            </div>
+                        </div>
+                    </article>
+                </div>
             </section>
-    
+            <div class="btn_container">
+                <a href="#"><button class="main_btn">Commander</button></a>
+            </div>
+
         </div>
         <footer class="footer">
             <h3 class="footer_title">ohmyfood</h3>
             <div class="footer_container">
                 <div class="footer_link_container">
-                <img src="/assets/logos/fork.svg" alt="fork logo">
-                <p class="footer_text">Proposer un restaurant</p>
+                    <img src="/assets/logos/fork.svg" alt="fork logo">
+                    <p class="footer_text">Proposer un restaurant</p>
                 </div>
                 <div class="footer_link_container">
-                <img src="/assets/logos/handshake.svg" alt="handshake logo">
-                <p class="footer_text">Devenir partenaire</p>
+                    <img src="/assets/logos/handshake.svg" alt="handshake logo">
+                    <p class="footer_text">Devenir partenaire</p>
                 </div>
-            <p class="footer_text">Mentions légales</p>
-            <p class="footer_text">Contact</p>
+                <p class="footer_text">Mentions légales</p>
+                <p class="footer_text">Contact</p>
             </div>
         </footer>
 
     </div>
-   
+
 </body>
+
 </html>
 
