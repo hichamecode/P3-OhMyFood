@@ -1018,7 +1018,6 @@ header .nav_logo_title {
   padding-right: 15px;
 }
 .group_container_cards {
-  animation: appear;
   display: flex;
   flex-direction: column;
   gap: 12px;
@@ -1027,17 +1026,23 @@ header .nav_logo_title {
 
 .group_one {
   animation-delay: 0s;
-  animation: appearGroupOne ease-in-out 600ms forwards;
+  animation: appearGroupOne ease-out 600ms forwards;
 }
 
 .group_two {
   animation-delay: 300ms;
-  animation: appearGroupOne ease-in-out 900ms forwards;
+  animation: appearGroupOne ease-out 900ms forwards;
 }
 
 .group_three {
   animation-delay: 600ms;
-  animation: appearGroupOne ease-in-out 1200ms forwards;
+  animation: appearGroupOne ease-out 1200ms forwards;
+}
+
+.label_checkbox_selected {
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
 
 .group_container_card {
@@ -1060,9 +1065,10 @@ header .nav_logo_title {
   overflow: hidden;
 }
 .group_container_card .group_container_header {
-  display: flex;
+  display: inline-block;
   flex-direction: column;
   gap: 5px;
+  overflow: hidden;
 }
 .group_container_card .group_container_header_title {
   font-size: 1.125rem;
@@ -1072,6 +1078,7 @@ header .nav_logo_title {
   line-height: normal;
   color: #000000;
   text-overflow: ellipsis;
+  white-space: nowrap;
   overflow: hidden;
 }
 .group_container_card .group_container_header_text {
@@ -1081,8 +1088,9 @@ header .nav_logo_title {
   font-weight: 300;
   line-height: normal;
   color: #000000;
-  overflow: hidden;
   text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }
 
 .group_container_card_info {
@@ -1100,10 +1108,8 @@ header .nav_logo_title {
   line-height: normal;
   color: #353535;
   justify-content: flex-end;
-  transition: all 400ms ease-in-out;
 }
 .group_container_card_info .selected_container {
-  transition: all 400ms ease-in-out;
   margin-right: -74px;
 }
 .group_container_card_info .selected_container .selected_label {
@@ -1113,10 +1119,6 @@ header .nav_logo_title {
      object-fit: cover;
 }
 
-.group_container_card:hover .selected_container {
-  margin-right: -15px;
-}
-
 .btn_container {
   display: flex;
   justify-content: center;
@@ -1124,15 +1126,23 @@ header .nav_logo_title {
 
 /* MEDIA QUERY RESPONSIVE DESKTOP */
 @media (min-width: 1024px) {
-  .group_container_card {
-    max-width: 550px;
-  }
-}
-@media (min-width: 1024px) {
   .menu_container {
     margin: auto;
     width: 1055px;
     margin-top: -40px;
+  }
+  /* animation du desktop uniquement au survol de la souris */
+  .group_container_card {
+    max-width: 550px;
+  }
+  .group_container_card_price {
+    transition: all 400ms ease-in-out;
+  }
+  .group_container_card .selected_container {
+    transition: all 400ms ease-in-out;
+  }
+  .group_container_card:hover .selected_container {
+    margin-right: -15px;
   }
 }
 @media (min-width: 1440px) {
@@ -1151,18 +1161,68 @@ header .nav_logo_title {
     opacity: 0;
   }
   25% {
-    opacity: 0.25;
+    transform: translateX(-200px);
   }
   50% {
     opacity: 0.5;
   }
   75% {
-    opacity: 0.75;
-  }
-  100% {
     opacity: 1;
   }
+  100% {
+    transform: translateX(0);
+  }
 }
+/* animation apparition de selected_container checked (checkbox hack) */
+.selected_container {
+  transition: all 400ms ease-in-out;
+}
+
+#selection_card_1:checked ~ .label_checkbox_selected .card_one .selected_container {
+  margin-right: -15px;
+}
+
+#selection_card_2:checked ~ .label_checkbox_selected .card_two .selected_container {
+  margin-right: -15px;
+}
+
+#selection_card_3:checked ~ .label_checkbox_selected .card_three .selected_container {
+  margin-right: -15px;
+}
+
+#selection_card_4:checked ~ .label_checkbox_selected .card_four .selected_container {
+  margin-right: -15px;
+}
+
+#selection_card_5:checked ~ .label_checkbox_selected .card_five .selected_container {
+  margin-right: -15px;
+}
+
+#selection_card_6:checked ~ .label_checkbox_selected .card_six .selected_container {
+  margin-right: -15px;
+}
+
+#selection_card_7:checked ~ .label_checkbox_selected .card_seven .selected_container {
+  margin-right: -15px;
+}
+
+#selection_card_8:checked ~ .label_checkbox_selected .card_eight .selected_container {
+  margin-right: -15px;
+}
+
+#selection_card_9:checked ~ .label_checkbox_selected .card_nine .selected_container {
+  margin-right: -15px;
+}
+
+#selection_card_x:checked ~ .label_checkbox_selected .card_x .selected_container {
+  margin-right: -15px;
+}
+
+.hide_checkbox {
+  position: absolute;
+  left: -9999px;
+}
+
 * {
   margin: 0;
   padding: 0;
