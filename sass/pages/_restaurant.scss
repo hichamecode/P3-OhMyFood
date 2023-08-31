@@ -1,6 +1,12 @@
 .body_container_restaurant {
     display: flex;
     flex-direction: column;
+
+    @media (min-width: 1440px) {
+
+        max-width: 1440px;
+        margin: auto;
+    }
 }
 
 .nav_logo {
@@ -19,6 +25,12 @@
     height: 275px;
     width: 100%;
     object-fit: cover;
+
+    @media (min-width: 1440px) {
+
+        border-bottom-left-radius: 30px;
+        border-bottom-right-radius: 30px;
+    }
 }
 
 .menu_container {
@@ -32,17 +44,26 @@
     border-top-left-radius: 30px;
     border-top-right-radius: 30px;
 
+    @media (min-width: 1024px) {
+
+        margin: auto; // fixer la largeur de menu_container pour garder de la cohérence
+        width: 1055px;
+        margin-top: -40px;
+    }
+
     .menu_title_container {
         display: flex;
         align-items: center;
         justify-content: space-between;
         gap: 24px;
         padding: 0 17px;
+        position: relative;
 
         .heart_logo,
         .heart_filled {
-            // position absolute mais se décale lors du responsive
-
+            position: absolute;
+            top: 37%;
+            right: 4%;
         }
     }
 
@@ -56,27 +77,6 @@
     }
 }
 
-.group_container_title {
-    font-size: $group-title-font-size;
-    font-family: $group-tite-font-family;
-    font-style: $group-title-font-style;
-    font-weight: $group-title-font-weight;
-    line-height: $group-title-line-height;
-    color: $group-title-color;
-    text-transform: uppercase;
-    position: relative;
-    padding-bottom: 3px;
-
-    &::after {
-        position: absolute;
-        left: 0;
-        bottom: 0;
-        content: "";
-        border-bottom: $ter 3px solid;
-        width: 40px;
-    }
-}
-
 .group_container {
 
     display: flex;
@@ -84,6 +84,27 @@
     gap: 12px;
     padding-left: 15px;
     padding-right: 15px;
+
+    &_title {
+        font-size: $group-title-font-size;
+        font-family: $group-tite-font-family;
+        font-style: $group-title-font-style;
+        font-weight: $group-title-font-weight;
+        line-height: $group-title-line-height;
+        color: $group-title-color;
+        text-transform: uppercase;
+        position: relative;
+        padding-bottom: 3px;
+
+        &::after {
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            content: "";
+            border-bottom: $ter 3px solid;
+            width: 40px;
+        }
+    }
 
     &_cards {
         display: flex;
@@ -93,6 +114,7 @@
     }
 
 }
+
 
 .group_one {
     animation-delay: 0s;
@@ -136,6 +158,11 @@
     cursor: pointer;
     overflow: hidden; // permet à selected_label de ne pas dépasser de la card
 
+    @media (min-width: 1024px) {
+
+        max-width: 550px;
+    }
+
     .group_container_header {
 
         display: inline-block;
@@ -166,10 +193,7 @@
             white-space: nowrap;
             overflow: hidden;
         }
-
     }
-
-
 }
 
 .group_container_card_info {
@@ -178,7 +202,6 @@
     align-items: center;
     justify-self: flex-end;
     gap: 15px;
-
 
     .group_container_card_price {
         font-size: $menu-card-price-font-size;
@@ -189,11 +212,19 @@
         color: $menu-card-price-color;
         justify-content: flex-end;
 
+        @media (min-width: 1024px) {
+
+            transition: all 400ms ease-in-out;
+        }
     }
 
     .selected_container {
         margin-right: -74px;
 
+        @media (min-width: 1024px) {
+
+            transition: all 400ms ease-in-out;
+        }
 
         .selected_label {
             height: 4.875rem;
@@ -202,9 +233,7 @@
             /*59px*/
             object-fit: cover;
         }
-
     }
-
 }
 
 .btn_container {
@@ -212,47 +241,23 @@
     justify-content: center;
 }
 
-
 /* MEDIA QUERY RESPONSIVE DESKTOP */
 
+/* animation du desktop uniquement au survol de la souris */
+.group_container_card {
+    max-width: 550px;
 
-@media (min-width: 1024px) {
-    .menu_container {
-        margin: auto; // fixer la largeur de menu_container pour garder de la cohérence
-        width: 1055px;
-        margin-top: -40px;
+    &_price {
+        transition: all 400ms ease-in-out;
     }
 
-    /* animation du desktop uniquement au survol de la souris */
-    .group_container_card {
-        max-width: 550px;
-
-        &_price {
-            transition: all 400ms ease-in-out;
-        }
-
-        .selected_container {
-            transition: all 400ms ease-in-out;
-        }
-
-        &:hover .selected_container {
-            margin-right: -15px;
-        }
+    .selected_container {
+        transition: all 400ms ease-in-out;
     }
 
-}
-
-@media (min-width: 1440px) {
-    .body_container_restaurant {
-        max-width: 1440px;
-        margin: auto;
+    &:hover .selected_container {
+        margin-right: -15px;
     }
-
-    .image_container img {
-        border-bottom-left-radius: 30px;
-        border-bottom-right-radius: 30px;
-    }
-
 }
 
 /* ANIMATION APPARITION DES GROUPES */
@@ -260,7 +265,6 @@
 @keyframes appearGroupOne {
     0% {
         opacity: 0;
-
     }
 
     25% {
