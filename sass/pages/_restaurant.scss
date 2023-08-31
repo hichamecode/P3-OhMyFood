@@ -86,7 +86,6 @@
     padding-right: 15px;
 
     &_cards {
-        animation: appear;
         display: flex;
         flex-direction: column;
         gap: 12px;
@@ -97,23 +96,30 @@
 
 .group_one {
     animation-delay: 0s;
-    animation: appearGroupOne ease-in-out 600ms forwards;
+    animation: appearGroupOne ease-out 600ms forwards;
 }
 
 .group_two {
     animation-delay: 300ms;
-    animation: appearGroupOne ease-in-out 900ms forwards;
+    animation: appearGroupOne ease-out 900ms forwards;
 }
 
 .group_three {
     animation-delay: 600ms;
-    animation: appearGroupOne ease-in-out 1200ms forwards;
+    animation: appearGroupOne ease-out 1200ms forwards;
 }
 
+.label_checkbox_selected {
+
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
 
 .group_container_card {
     width: 90%;
-    height: 4.625rem; /*74px*/
+    height: 4.625rem;
+    /*74px*/
     box-sizing: border-box;
     min-width: 18.125rem;
     /*290px*/
@@ -132,9 +138,10 @@
 
     .group_container_header {
 
-        display: flex;
+        display: inline-block;
         flex-direction: column;
         gap: 5px;
+        overflow: hidden;
 
         &_title {
             font-size: $menu-card-title-font-size;
@@ -144,6 +151,7 @@
             line-height: $menu-card-title-line-height;
             color: $menu-card-title-color;
             text-overflow: ellipsis;
+            white-space: nowrap;
             overflow: hidden;
         }
 
@@ -154,13 +162,14 @@
             font-weight: $menu-card-text-font-weight;
             line-height: $menu-card-text-line-height;
             color: $menu-card-text-color;
-            overflow: hidden;
             text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
         }
 
     }
 
- 
+
 }
 
 .group_container_card_info {
@@ -179,29 +188,24 @@
         line-height: $menu-card-price-line-height;
         color: $menu-card-price-color;
         justify-content: flex-end;
-        transition: all 400ms ease-in-out;
 
     }
 
-     .selected_container {
-    transition: all 400ms ease-in-out;
-    margin-right: -74px;
+    .selected_container {
+        margin-right: -74px;
 
-    .selected_label {
-        height: 4.875rem; /*78px*/
-        width: 3.688rem; /*59px*/
-        object-fit: cover;
+
+        .selected_label {
+            height: 4.875rem;
+            /*78px*/
+            width: 3.688rem;
+            /*59px*/
+            object-fit: cover;
+        }
+
     }
 
 }
-
-}
-
-.group_container_card:hover .selected_container {
-    margin-right: -15px;
-}
-
-
 
 .btn_container {
     display: flex;
@@ -213,17 +217,29 @@
 
 
 @media (min-width: 1024px) {
-    .group_container_card {
-        max-width: 550px;
-    }
-}
-
-@media (min-width: 1024px) {
     .menu_container {
         margin: auto; // fixer la largeur de menu_container pour garder de la cohérence
         width: 1055px;
         margin-top: -40px;
     }
+
+    /* animation du desktop uniquement au survol de la souris */
+    .group_container_card {
+        max-width: 550px;
+
+        &_price {
+            transition: all 400ms ease-in-out;
+        }
+
+        .selected_container {
+            transition: all 400ms ease-in-out;
+        }
+
+        &:hover .selected_container {
+            margin-right: -15px;
+        }
+    }
+
 }
 
 @media (min-width: 1440px) {
@@ -244,10 +260,11 @@
 @keyframes appearGroupOne {
     0% {
         opacity: 0;
+
     }
 
     25% {
-        opacity: 0.25;
+        transform: translateX(-200px);
     }
 
     50% {
@@ -255,11 +272,62 @@
     }
 
     75% {
-        opacity: 0.75;
+        opacity: 1;
     }
 
     100% {
-        opacity: 1;
+        transform: translateX(0);
     }
+}
+
+/* animation apparition de selected_container checked (checkbox hack) */
+
+.selected_container {
+    transition: all 400ms ease-in-out;
+}
+
+#selection_card_1:checked~.label_checkbox_selected .card_one .selected_container {
+    margin-right: -15px;
+}
+
+#selection_card_2:checked~.label_checkbox_selected .card_two .selected_container {
+    margin-right: -15px;
+}
+
+#selection_card_3:checked~.label_checkbox_selected .card_three .selected_container {
+    margin-right: -15px;
+}
+
+#selection_card_4:checked~.label_checkbox_selected .card_four .selected_container {
+    margin-right: -15px;
+}
+
+#selection_card_5:checked~.label_checkbox_selected .card_five .selected_container {
+    margin-right: -15px;
+}
+
+#selection_card_6:checked~.label_checkbox_selected .card_six .selected_container {
+    margin-right: -15px;
+}
+
+#selection_card_7:checked~.label_checkbox_selected .card_seven .selected_container {
+    margin-right: -15px;
+}
+
+#selection_card_8:checked~.label_checkbox_selected .card_eight .selected_container {
+    margin-right: -15px;
+}
+
+#selection_card_9:checked~.label_checkbox_selected .card_nine .selected_container {
+    margin-right: -15px;
+}
+
+#selection_card_x:checked~.label_checkbox_selected .card_x .selected_container {
+    margin-right: -15px;
+}
+
+.hide_checkbox {
+    position: absolute;
+    left: -9999px;
 }
 

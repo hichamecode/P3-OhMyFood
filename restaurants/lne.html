@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,28 +13,222 @@
     <link rel="stylesheet" href="/assets/main.css">
     <title>Menu - La note enchantée</title>
 </head>
+
 <body>
-    <header>
-        <div class="nav_logo">
-            <img class="nav_logo_go_back" src="/assets/logos/go-back.svg" alt="retour">
-            <h2 class="nav_logo_title">ohmyfood</h2>
-        </div>
-    </header>
-    <footer class="footer">
-        <h3 class="footer_title">ohmyfood</h3>
-        <div class="footer_container">
-            <div class="footer_link_container">
-            <img src="/assets/logos/fork.svg" alt="fork logo">
-            <p class="footer_text">Proposer un restaurant</p>
+    <div class="body_container_restaurant">
+        <header>
+            <div class="nav_logo">
+                <a class="nav_logo_go_back" href="../index.html"><img src="/assets/logos/go-back.svg" alt="retour"></a>
+                <h2 class="nav_logo_title">ohmyfood</h2>
             </div>
-            <div class="footer_link_container">
-            <img src="/assets/logos/handshake.svg" alt="handshake logo">
-            <p class="footer_text">Devenir partenaire</p>
-            </div>
-        <p class="footer_text">Mentions légales</p>
-        <p class="footer_text">Contact</p>
+        </header>
+        <div class="image_container">
+            <img src="/assets/images/la-note-enchantee.jpg" alt="la note enchantée">
         </div>
-    </footer>
+        <div class="menu_container">
+            <div class="menu_title_container">
+                <h1 class="menu_title">La note enchantée</h1>
+                <label for="heart_toggle_4">
+                    <input type="checkbox" class="hide_checkbox" id="heart_toggle_4">
+                    <img class="heart_logo" src="/assets/logos/new_heart.svg" alt="logo coeur">
+                    <img class="heart_filled" src="/assets/logos/Like.svg" alt="coeur plein">
+                </label>
+            </div>
+            <section class="group_container">
+                <h2 class="group_container_title">Entrées</h2>
+                <div class="group_container_cards group_one">
+                    <input type="checkbox" class="hide_checkbox" id="selection_card_1">
+                    <label for="selection_card_1" class="label_checkbox_selected">
+                        <article class="group_container_card card_one">
+                            <div class="group_container_header">
+                                <h3 class="group_container_header_title">Ravioles de foie gras</h3>
+                                <p class="group_container_header_text">Accompagné de leur crème à la truffe</p>
+                            </div>
+                            <div class="group_container_card_info">
+                                <p class="group_container_card_price">25€</p>
+                                <div class="selected_container">
+                                    <img src="/assets/logos/selected-label.svg" class="selected_label" alt="plat selectionné">
+                                </div>
+                            </div>
+                        </article>
+                    </label>
+                    <input type="checkbox" class="hide_checkbox" id="selection_card_2">
+                    <label for="selection_card_2" class="label_checkbox_selected">
+                    <article class="group_container_card card_two">
+                        <div class="group_container_header">
+                             <h3 class="group_container_header_title">Caviar osciètre</h3>
+                              <p class="group_container_header_text">Sur blini à la farine de blé noir</p>
+                        </div>
+                        <div class="group_container_card_info">
+                            <p class="group_container_card_price">35€</p>
+                            <div class="selected_container">
+                                <img src="/assets/logos/selected-label.svg" class="selected_label"
+                                    alt="plat selectionné">
+                            </div>
+                        </div>
+                    </article>
+                    </label>
+                    <input type="checkbox" class="hide_checkbox" id="selection_card_3">
+                    <label for="selection_card_3" class="label_checkbox_selected">
+                    <article class="group_container_card card_three">
+                        <div class="group_container_header">
+                            <h3 class="group_container_header_title">Homard et espuma de potiron</h3>
+                            <p class="group_container_header_text">Marinés aux zestes d'orange</p>
+                        </div>
+                        <div class="group_container_card_info">
+                            <p class="group_container_card_price">20€</p>
+                            <div class="selected_container">
+                                <img src="/assets/logos/selected-label.svg" class="selected_label"
+                                    alt="plat selectionné">
+                            </div>
+                        </div>
+                    </article>
+                    </label>
+                    <input type="checkbox" class="hide_checkbox" id="selection_card_x">
+                    <label for="selection_card_x" class="label_checkbox_selected">
+                    <article class="group_container_card card_x">
+                        <div class="group_container_header">
+                            <h3 class="group_container_header_title">Foie gras de canard cuit entier</h3>
+                            <p class="group_container_header_text">Confiture de figue et pain toasté</p>
+                        </div>
+                        <div class="group_container_card_info">
+                            <p class="group_container_card_price">35€</p>
+                            <div class="selected_container">
+                                <img src="/assets/logos/selected-label.svg" class="selected_label"
+                                    alt="plat selectionné">
+                            </div>
+                        </div>
+                    </article>
+                    </label>
+                </div>
+            </section>
+            <section class="group_container">
+                <h2 class="group_container_title">Plats</h2>
+                <div class="group_container_cards group_two">
+                    <input type="checkbox" class="hide_checkbox" id="selection_card_4">
+                    <label for="selection_card_4" class="label_checkbox_selected">
+                    <article class="group_container_card card_four">
+                        <div class="group_container_header">
+                            <h3 class="group_container_header_title">Noix de coquilles Saint-Jacques</h3>
+                            <p class="group_container_header_text">Sur lit de purée céleri-rave</p>
+                        </div>
+                        <div class="group_container_card_info">
+                            <p class="group_container_card_price">40€</p>
+                            <div class="selected_container">
+                                <img src="/assets/logos/selected-label.svg" class="selected_label"
+                                    alt="plat selectionné">
+                            </div>
+                        </div>
+                    </article>
+                    </label>
+                    <input type="checkbox" class="hide_checkbox" id="selection_card_5">
+                    <label for="selection_card_5" class="label_checkbox_selected">
+                    <article class="group_container_card card_five">
+                        <div class="group_container_header">
+                            <h3 class="group_container_header_title">Langoustine poêlée</h3>
+                            <p class="group_container_header_text">Purée de patate douce</p>
+                        </div>
+                        <div class="group_container_card_info">
+                            <p class="group_container_card_price">35€</p>
+                            <div class="selected_container">
+                                <img src="/assets/logos/selected-label.svg" class="selected_label"
+                                    alt="plat selectionné">
+                            </div>
+                        </div>
+                    </article>
+                    </label>
+                    <input type="checkbox" class="hide_checkbox" id="selection_card_6">
+                    <label for="selection_card_6" class="label_checkbox_selected">
+                    <article class="group_container_card card_six">
+                        <div class="group_container_header">
+                            <h3 class="group_container_header_title">Mijotée de queue de boeuf</h3>
+                            <p class="group_container_header_text">Et riz sauvage aux zestes de citron</p>
+                        </div>
+                        <div class="group_container_card_info">
+                            <p class="group_container_card_price">45€</p>
+                            <div class="selected_container">
+                                <img src="/assets/logos/selected-label.svg" class="selected_label"
+                                    alt="plat selectionné">
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </section>
+            <section class="group_container">
+                <h2 class="group_container_title">Desserts</h2>
+                <div class="group_container_cards group_three">
+                    <input type="checkbox" class="hide_checkbox" id="selection_card_7">
+                    <label for="selection_card_7" class="label_checkbox_selected">
+                    <article class="group_container_card card_seven">
+                        <div class="group_container_header">
+                            <h3 class="group_container_header_title">Macaron noisette et chocolat</h3>
+                            <p class="group_container_header_text">Glace au caramel brun et sel de Guérande</p>
+                        </div>
+                        <div class="group_container_card_info">
+                            <p class="group_container_card_price">18€</p>
+                            <div class="selected_container">
+                                <img src="/assets/logos/selected-label.svg" class="selected_label"
+                                    alt="plat selectionné">
+                            </div>
+                        </div>
+                    </article>
+                    </label>
+                    <input type="checkbox" class="hide_checkbox" id="selection_card_8">
+                    <label for="selection_card_8" class="label_checkbox_selected">
+                    <article class="group_container_card card_eight">
+                        <div class="group_container_header">
+                            <h3 class="group_container_header_title">Baba au rhum revisité</h3>
+                            <p class="group_container_header_text">Avec son coulis de citron</p>
+                        </div>
+                        <div class="group_container_card_info">
+                            <p class="group_container_card_price">22€</p>
+                            <div class="selected_container">
+                                <img src="/assets/logos/selected-label.svg" class="selected_label"
+                                    alt="plat selectionné">
+                            </div>
+                        </div>
+                    </article>
+                    </label>
+                    <input type="checkbox" class="hide_checkbox" id="selection_card_9">
+                    <label for="selection_card_9" class="label_checkbox_selected">
+                    <article class="group_container_card card_nine">
+                        <div class="group_container_header">
+                            <h3 class="group_container_header_title">Tarte au citron meringuée</h3>
+                            <p class="group_container_header_text">Destructurée</p>
+                        </div>
+                        <div class="group_container_card_info">
+                            <p class="group_container_card_price">23€</p>
+                            <div class="selected_container">
+                                <img src="/assets/logos/selected-label.svg" class="selected_label"
+                                    alt="plat selectionné">
+                            </div>
+                        </div>
+                    </article>
+                    </label>
+                </div>
+            </section>
+            <div class="btn_container">
+                <a href="#"><button class="main_btn">Commander</button></a>
+            </div>
+        </div>
+        <footer class="footer">
+            <h3 class="footer_title">ohmyfood</h3>
+            <div class="footer_container">
+                <div class="footer_link_container">
+                    <img src="/assets/logos/fork.svg" alt="fork logo">
+                    <p class="footer_text">Proposer un restaurant</p>
+                </div>
+                <div class="footer_link_container">
+                    <img src="/assets/logos/handshake.svg" alt="handshake logo">
+                    <p class="footer_text">Devenir partenaire</p>
+                </div>
+                <p class="footer_text">Mentions légales</p>
+                <p class="footer_text">Contact</p>
+            </div>
+        </footer>
+    </div>
 </body>
 </html>
+
+
 
