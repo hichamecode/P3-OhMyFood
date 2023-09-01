@@ -961,6 +961,23 @@ header .nav_logo_title {
   }
 }
 /* ANIMATIONS PAGE RESTAURANTS */
+@keyframes appearGroup {
+  0% {
+    opacity: 0;
+  }
+  25% {
+    transform: translateX(-200px);
+  }
+  50% {
+    opacity: 0.5;
+  }
+  75% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
 .body_container_restaurant {
   display: flex;
   flex-direction: column;
@@ -1070,17 +1087,17 @@ header .nav_logo_title {
 
 .group_one {
   animation-delay: 0s;
-  animation: appearGroupOne ease-out 600ms forwards;
+  animation: appearGroup ease-out 600ms forwards;
 }
 
 .group_two {
   animation-delay: 300ms;
-  animation: appearGroupOne ease-out 900ms forwards;
+  animation: appearGroup ease-out 900ms forwards;
 }
 
 .group_three {
   animation-delay: 600ms;
-  animation: appearGroupOne ease-out 1200ms forwards;
+  animation: appearGroup ease-out 1200ms forwards;
 }
 
 .label_checkbox_selected {
@@ -1202,7 +1219,7 @@ header .nav_logo_title {
 }
 
 /* ANIMATION APPARITION DES GROUPES */
-@keyframes appearGroupOne {
+@keyframes appearGroup {
   0% {
     opacity: 0;
   }

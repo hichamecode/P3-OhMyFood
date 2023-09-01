@@ -115,20 +115,19 @@
 
 }
 
-
 .group_one {
     animation-delay: 0s;
-    animation: appearGroupOne ease-out 600ms forwards;
+    animation: appearGroup ease-out 600ms forwards;
 }
 
 .group_two {
     animation-delay: 300ms;
-    animation: appearGroupOne ease-out 900ms forwards;
+    animation: appearGroup ease-out 900ms forwards;
 }
 
 .group_three {
     animation-delay: 600ms;
-    animation: appearGroupOne ease-out 1200ms forwards;
+    animation: appearGroup ease-out 1200ms forwards;
 }
 
 .label_checkbox_selected {
@@ -244,6 +243,7 @@
 /* MEDIA QUERY RESPONSIVE DESKTOP */
 
 /* animation du desktop uniquement au survol de la souris */
+
 .group_container_card {
     max-width: 550px;
 
@@ -262,7 +262,7 @@
 
 /* ANIMATION APPARITION DES GROUPES */
 
-@keyframes appearGroupOne {
+@keyframes appearGroup {
     0% {
         opacity: 0;
     }
