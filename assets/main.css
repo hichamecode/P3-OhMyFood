@@ -377,6 +377,7 @@ header .nav_logo_title {
 @media (min-width: 1024px) {
   .footer {
     flex-direction: row-reverse;
+    gap: 80px;
   }
 }
 .footer_title {
@@ -395,6 +396,7 @@ header .nav_logo_title {
 @media (min-width: 1024px) {
   .footer_container {
     flex-direction: row;
+    gap: 35px;
   }
 }
 .footer_link_container {
@@ -406,6 +408,7 @@ header .nav_logo_title {
     flex-direction: row;
     flex-wrap: wrap;
     align-items: baseline;
+    gap: 5px;
   }
 }
 .footer_text {
@@ -961,6 +964,23 @@ header .nav_logo_title {
   }
 }
 /* ANIMATIONS PAGE RESTAURANTS */
+@keyframes appearGroup {
+  0% {
+    opacity: 0;
+  }
+  25% {
+    transform: translateX(-200px);
+  }
+  50% {
+    opacity: 0.5;
+  }
+  75% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
 .body_container_restaurant {
   display: flex;
   flex-direction: column;
@@ -1015,7 +1035,7 @@ header .nav_logo_title {
 .menu_container .menu_title_container {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   gap: 24px;
   padding: 0 17px;
   position: relative;
@@ -1025,6 +1045,27 @@ header .nav_logo_title {
   position: absolute;
   top: 37%;
   right: 4%;
+}
+@media (min-width: 450px) {
+  .menu_container .menu_title_container .heart_logo,
+  .menu_container .menu_title_container .heart_filled {
+    top: 37%;
+    right: 15%;
+  }
+}
+@media (min-width: 600px) {
+  .menu_container .menu_title_container .heart_logo,
+  .menu_container .menu_title_container .heart_filled {
+    top: 37%;
+    right: 20%;
+  }
+}
+@media (min-width: 750px) {
+  .menu_container .menu_title_container .heart_logo,
+  .menu_container .menu_title_container .heart_filled {
+    top: 37%;
+    right: 30%;
+  }
 }
 .menu_container .menu_title {
   font-size: 1.75rem;
@@ -1070,17 +1111,17 @@ header .nav_logo_title {
 
 .group_one {
   animation-delay: 0s;
-  animation: appearGroupOne ease-out 600ms forwards;
+  animation: appearGroup ease-out 600ms forwards;
 }
 
 .group_two {
   animation-delay: 300ms;
-  animation: appearGroupOne ease-out 900ms forwards;
+  animation: appearGroup ease-out 900ms forwards;
 }
 
 .group_three {
   animation-delay: 600ms;
-  animation: appearGroupOne ease-out 1200ms forwards;
+  animation: appearGroup ease-out 1200ms forwards;
 }
 
 .label_checkbox_selected {
@@ -1165,7 +1206,7 @@ header .nav_logo_title {
   }
 }
 .group_container_card_info .selected_container {
-  margin-right: -74px;
+  margin-right: -77px;
 }
 @media (min-width: 1024px) {
   .group_container_card_info .selected_container {
@@ -1173,8 +1214,8 @@ header .nav_logo_title {
   }
 }
 .group_container_card_info .selected_container .selected_label {
-  height: 4.875rem;
-  /*78px*/
+  height: 5rem;
+  /*80px*/
   width: 3.688rem;
   /*59px*/
   -o-object-fit: cover;
@@ -1202,7 +1243,7 @@ header .nav_logo_title {
 }
 
 /* ANIMATION APPARITION DES GROUPES */
-@keyframes appearGroupOne {
+@keyframes appearGroup {
   0% {
     opacity: 0;
   }
@@ -1497,6 +1538,9 @@ a {
     max-width: 450px;
     min-width: 340px;
   }
+}
+.restaurants_container_card .image_card_container {
+  border-radius: 15px;
 }
 .restaurants_container_card .image_card_container img {
   -o-object-fit: cover;

@@ -2,11 +2,15 @@
 
   @import"../sass/utils/variables";
   @import"../sass/base/normalize";
+
   @import"../sass/layouts/header";
   @import"../sass/layouts/footer";
+
   @import"../sass/components/components";
+
   @import"../sass/base/animation-loader";
-  @import"../sass/base/animations_rest";
+  @import"../sass/base/animation-rest";
+
   @import"../sass/pages/restaurant";
 
   /* style général */
@@ -257,6 +261,8 @@
           }
 
         .image_card_container {
+
+          border-radius: 15px;
 
           img {
             object-fit: cover;
